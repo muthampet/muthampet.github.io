@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ముత్తంపేట గ్రామ పంచాయతీ | Muthampet Grama Panchayat</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Mandali&display=swap');
+        body { font-family: 'Poppins', 'Mandali', sans-serif; }
+        .hero-pattern {
+            background-color: #064e3b;
+            background-image: radial-gradient(#047857 0.75px, transparent 0.75px), radial-gradient(#047857 0.75px, #064e3b 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Top Gov Ribbon -->
+    <div class="bg-emerald-950 text-emerald-100 text-[11px] md:text-xs py-1.5 px-4 border-b border-emerald-900">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="lang-te font-medium">తెలంగాణ ప్రభుత్వం • పంచాయతీ రాజ్ & గ్రామీణాభివృద్ధి శాఖ</span>
+            <span class="lang-en hidden font-medium">Govt. of Telangana • Panchayat Raj Dept</span>
+            <span class="text-amber-400 font-semibold shrink-0 ml-2">కౌతల • కొమరంభీం ఆసిఫాబాద్</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-emerald-700 flex items-center justify-center text-white text-xl shadow shrink-0">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+                <div>
+                    <h1 class="text-base md:text-xl font-bold text-emerald-950 leading-tight">
+                        <span class="lang-te">ముత్తంపేట గ్రామ పంచాయతీ</span>
+                        <span class="lang-en hidden">Muthampet Grama Panchayat</span>
+                    </h1>
+                    <p class="text-[11px] md:text-xs text-slate-500 font-medium">Kouthala Mandal, Kumuram Bheem Asifabad Dist.</p>
+                </div>
+            </div>
+
+            <!-- Controls (Language Switcher + Mobile Menu Toggle) -->
+            <div class="flex items-center gap-2">
+                <!-- Language Switch Button -->
+                <button onclick="toggleLang()" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-lg border border-emerald-300 transition flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-language text-sm text-emerald-700"></i>
+                    <span id="lang-btn-text">English</span>
+                </button>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-700 ml-4">
+                    <a href="#home" class="hover:text-emerald-700 transition"><span class="lang-te">హోమ్</span><span class="lang-en hidden">Home</span></a>
+                    <a href="#about" class="hover:text-emerald-700 transition"><span class="lang-te">గ్రామం గురించి</span><span class="lang-en hidden">About</span></a>
+                    <a href="#team" class="hover:text-emerald-700 transition"><span class="lang-te">పాలక వర్గం</span><span class="lang-en hidden">Leadership</span></a>
+                    <a href="#services" class="hover:text-emerald-700 transition"><span class="lang-te">సేవలు</span><span class="lang-en hidden">Services</span></a>
+                    <a href="#contact" class="hover:text-emerald-700 transition"><span class="lang-te">సంప్రదించండి</span><span class="lang-en hidden">Contact</span></a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 text-xl p-1.5 focus:outline-none ml-1">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-100 border-t border-slate-200 px-4 py-3 space-y-2.5 text-sm font-medium">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-1 text-slate-700 hover:text-emerald-700"><span class="lang-te">హోమ్</span><span class="lang-en hidden">Home</span></a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-1 text-slate-700 hover:text-emerald-700"><span class="lang-te">గ్రామం గురించి</span><span class="lang-en hidden">About Village</span></a>
+            <a href="#team" onclick="toggleMobileMenu()" class="block py-1 text-slate-700 hover:text-emerald-700"><span class="lang-te">పాలక వర్గం & అధికారులు</span><span class="lang-en hidden">Elected Body</span></a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-1 text-slate-700 hover:text-emerald-700"><span class="lang-te">సేవలు & పథకాలు</span><span class="lang-en hidden">Services & Schemes</span></a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-1 text-slate-700 hover:text-emerald-700"><span class="lang-te">సంప్రదించండి</span><span class="lang-en hidden">Contact Us</span></a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern text-white py-12 md:py-16 px-4">
+        <div class="max-w-4xl mx
