@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ముత్తంపేట గ్రామ పంచాయతీ | Muthampet Grama Panchayat</title>
+    <title>ముత్తంపేట (ముత్యంపేట) గ్రామ పంచాయతీ | Muthampet Grama Panchayat</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -18,40 +18,40 @@
             background-position: 0 0, 12px 12px;
         }
         .page-view { display: none; }
-        .page-view.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        .page-view.active { display: block; animation: fadeIn 0.25s ease-in-out; }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
+            from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
-    <!-- Top Gov Bar Ribbon -->
+    <!-- Top Gov Ribbon -->
     <div class="bg-emerald-950 text-emerald-100 text-[11px] md:text-xs py-1.5 px-4 border-b border-emerald-900 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
             <div class="flex items-center gap-2">
                 <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span class="lang-te font-medium">తెలంగాణ ప్రభుత్వం • పంచాయతీ రాజ్ & గ్రామీణాభివృద్ధి శాఖ</span>
-                <span class="lang-en hidden font-medium">Govt. of Telangana • Department of Panchayat Raj</span>
+                <span class="lang-en hidden font-medium">Govt. of Telangana • Dept of Panchayat Raj</span>
             </div>
             <div class="flex items-center gap-3">
-                <span class="text-amber-300 font-semibold text-[11px]"><i class="fa-solid fa-location-dot mr-1"></i>కౌతల మండలం, కొమరంభీం ఆసిఫాబాద్ జిల్లా</span>
+                <span class="text-amber-300 font-semibold text-[11px]"><i class="fa-solid fa-location-dot mr-1"></i>కౌతల మండలం • కొమురం భీం ఆసిఫాబాద్ జిల్లా</span>
                 <!-- Lang Switcher -->
-                <button onclick="toggleLang()" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[11px] shadow-sm transition">
+                <button onclick="toggleLang()" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold px-2.5 py-0.5 rounded text-[11px] shadow transition">
                     <span id="lang-btn-text">English</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Navigation Header (6 Direct Pages) -->
     <header class="bg-white shadow sticky top-6 z-40">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             
-            <!-- Logo & Brand Header -->
+            <!-- Brand Logo -->
             <a href="#home" class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-800 to-emerald-600 flex items-center justify-center text-white text-xl shadow-md shrink-0">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-800 to-emerald-600 flex items-center justify-center text-white text-xl shadow shrink-0">
                     <i class="fa-solid fa-landmark"></i>
                 </div>
                 <div>
@@ -59,58 +59,58 @@
                         <span class="lang-te">ముత్తంపేట గ్రామ పంచాయతీ</span>
                         <span class="lang-en hidden">Muthampet Grama Panchayat</span>
                     </h1>
-                    <p class="text-[11px] text-slate-500 font-medium">Mandal: Kouthala | Dist: KB Asifabad | PIN: 504299</p>
+                    <p class="text-[11px] text-slate-500 font-medium">LGD: 569379 | కౌతల మండలం | పిన్: 504299</p>
                 </div>
             </a>
 
-            <!-- Desktop Menu (6 Pure Pages) -->
-            <nav class="hidden lg:flex items-center space-x-1 text-xs md:text-sm font-semibold">
+            <!-- Desktop Menu (6 Pure Independent Pages) -->
+            <nav class="hidden xl:flex items-center space-x-1 text-xs md:text-sm font-semibold">
                 <a href="#home" id="nav-home" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
                     <span class="lang-te">1. హోమ్</span><span class="lang-en hidden">1. Home</span>
                 </a>
                 <a href="#about" id="nav-about" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">2. గ్రామం ప్రొఫైల్</span><span class="lang-en hidden">2. Profile</span>
+                    <span class="lang-te">2. జనాభా & ప్రొఫైల్</span><span class="lang-en hidden">2. Census & Profile</span>
                 </a>
                 <a href="#governance" id="nav-governance" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">3. పాలక వర్గం & సిబ్బంది</span><span class="lang-en hidden">3. Elected Body</span>
+                    <span class="lang-te">3. పాలక వర్గం & ఫోన్ నంబర్లు</span><span class="lang-en hidden">3. Elected Body</span>
                 </a>
-                <a href="#infrastructure" id="nav-infrastructure" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">4. గ్రామ వసతులు</span><span class="lang-en hidden">4. Amenities</span>
+                <a href="#representatives" id="nav-representatives" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
+                    <span class="lang-te">4. ప్రజాప్రతినిధులు (MLA/MP)</span><span class="lang-en hidden">4. MLA & MP</span>
                 </a>
                 <a href="#services" id="nav-services" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">5. పథకాలు & సేవలు</span><span class="lang-en hidden">5. Welfare</span>
+                    <span class="lang-te">5. ప్రభుత్వ పథకాలు & సేవలు</span><span class="lang-en hidden">5. Welfare & Services</span>
                 </a>
                 <a href="#contact" id="nav-contact" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">6. ఫిర్యాదులు & కాంటాక్ట్</span><span class="lang-en hidden">6. Grievance</span>
+                    <span class="lang-te">6. ప్రజా ఫిర్యాదులు</span><span class="lang-en hidden">6. Grievance Portal</span>
                 </a>
             </nav>
 
             <!-- Mobile Hamburger Button -->
-            <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-800 text-2xl p-2 focus:outline-none">
+            <button onclick="toggleMobileMenu()" class="xl:hidden text-slate-800 text-2xl p-2 focus:outline-none">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
         </div>
 
         <!-- Mobile Drawer Menu (Full 6 Pages) -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-1.5 text-xs font-semibold shadow-2xl">
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-1.5 text-xs font-semibold shadow-2xl">
             <a href="#home" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-house w-6 text-emerald-700"></i>1. హోమ్ పేజీ (Home)</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-mountain-sun w-6 text-emerald-700"></i>2. గ్రామం ప్రొఫైల్ & చరిత్ర (About)</a>
-            <a href="#governance" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-users-gear w-6 text-emerald-700"></i>3. పాలక వర్గం & వార్డు సభ్యులు (Leadership)</a>
-            <a href="#infrastructure" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-building-columns w-6 text-emerald-700"></i>4. గ్రామ సౌకర్యాలు & స్కూల్స్ (Infrastructure)</a>
-            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-hand-holding-dollar w-6 text-emerald-700"></i>5. ప్రభుత్వ పథకాలు & సేవలు (Schemes)</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-headset w-6 text-emerald-700"></i>6. ప్రజా ఫిర్యాదులు & సంప్రదించండి (Grievance)</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-users-rectangle w-6 text-emerald-700"></i>2. జనాభా లెక్కలు & చరిత్ర (Profile & Census)</a>
+            <a href="#governance" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-id-card-clip w-6 text-emerald-700"></i>3. సర్పంచ్ & వార్డు సభ్యుల నంబర్లు (Directory)</a>
+            <a href="#representatives" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-building-flag w-6 text-emerald-700"></i>4. ఎమ్మెల్యే & ఎంపీ గారి వివరాలు (MLA & MP)</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-hand-holding-dollar w-6 text-emerald-700"></i>5. ప్రభుత్వ సంక్షేమ పథకాలు (Welfare)</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-bullhorn w-6 text-emerald-700"></i>6. ప్రజా సమస్యల ఫిర్యాదు (Grievance)</a>
         </div>
     </header>
 
-    <!-- Scroll Notice Ribbon -->
-    <div class="bg-amber-100 border-b border-amber-300 py-1 px-4 text-xs font-medium text-amber-950 flex items-center gap-2">
-        <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px] shrink-0">నోటీస్ బోర్డు</span>
-        <marquee behavior="scroll" direction="left" class="leading-relaxed">
-            గ్రామ సభ సమావేశాలు మరియు ఉపాధి హామీ (MGNREGS), ఆసరా పింఛన్లు, రైతు భరోసా, మిషన్ భగీరథ తాగునీటి సరఫరా దరఖాస్తుల కొరకు గ్రామ పంచాయతీ కార్యాలయంలో సంప్రదించగలరు.
+    <!-- Notice Ticker -->
+    <div class="bg-amber-100 border-b border-amber-300 py-1.5 px-4 text-xs font-medium text-amber-950 flex items-center gap-2">
+        <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px] shrink-0">నోటీస్</span>
+        <marquee behavior="scroll" direction="left">
+            ముత్తంపేట గ్రామ పంచాయతీ పరిధిలో తాగునీరు, పారిశుధ్యం, ఆసరా పింఛన్లు మరియు ఉపాధి హామీ దరఖాస్తుల కొరకు సర్పంచ్ రాంటెంకి ఉష మోతిరాం గారిని లేదా గ్రామ కార్యదర్శి గారిని సంప్రదించగలరు.
         </marquee>
     </div>
 
-    <!-- MAIN APP CONTENT: 6 COMPLETE PAGES -->
+    <!-- MAIN BODY CONTAINER (6 DISTINCT FULL PAGES) -->
     <main class="flex-grow">
 
         <!-- ================= PAGE 1: HOME ================= -->
@@ -119,474 +119,507 @@
             <div class="hero-pattern text-white py-14 md:py-20 px-4">
                 <div class="max-w-4xl mx-auto text-center">
                     <span class="inline-block bg-emerald-800/90 text-amber-300 text-xs px-3.5 py-1 rounded-full font-semibold mb-3 border border-emerald-600">
-                        ఆదర్శ గ్రామ పంచాయతీ • ముత్తంపేట
+                        ఆదర్శ గ్రామ పంచాయతీ • ముత్తంపేట (ముత్యంపేట)
                     </span>
                     <h2 class="text-2xl md:text-5xl font-extrabold leading-tight mb-4">
-                        ముత్తంపేట గ్రామ పంచాయతీ వెబ్‌పోర్టల్
+                        ముత్తంపేట గ్రామ పంచాయతీ అధికారిక వెబ్‌పోర్టల్
                     </h2>
                     <p class="text-emerald-100 text-xs md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
-                        కొమరంభీం ఆసిఫాబాద్ జిల్లా, కౌతల మండల పరిధిలోని ముత్తంపేట గ్రామానికి చెందిన సమగ్ర సేవలు, గ్రామాభివృద్ధి పనులు మరియు ప్రజా సంక్షేమ వివరాల అధికారిక వేదిక.
+                        కౌతల మండలం, కొమురం భీం ఆసిఫాబాద్ జిల్లా పరిధిలోని ముత్తంపేట గ్రామ ప్రజల సంక్షేమం, పరిపాలన మరియు ప్రజా సేవల డిజిటల్ వేదిక.
                     </p>
                     <div class="flex flex-wrap justify-center gap-3">
-                        <a href="#services" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold text-xs md:text-sm px-6 py-3 rounded-xl shadow-lg transition">
-                            <i class="fa-solid fa-list-check mr-1.5"></i>ప్రజా సేవలు
+                        <a href="#governance" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold text-xs md:text-sm px-5 py-3 rounded-xl shadow-lg transition">
+                            <i class="fa-solid fa-phone mr-1.5"></i>పాలక వర్గం కాంటాక్ట్స్
                         </a>
-                        <a href="#contact" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium text-xs md:text-sm px-6 py-3 rounded-xl transition">
-                            <i class="fa-solid fa-bullhorn mr-1.5"></i>ఫిర్యాదు నమోదు
+                        <a href="#about" class="bg-emerald-700 hover:bg-emerald-600 text-white font-medium text-xs md:text-sm px-5 py-3 rounded-xl transition">
+                            <i class="fa-solid fa-chart-column mr-1.5"></i>జనాభా & చరిత్ర
                         </a>
-                        <a href="#governance" class="bg-emerald-700/80 hover:bg-emerald-700 text-white font-medium text-xs md:text-sm px-6 py-3 rounded-xl transition">
-                            <i class="fa-solid fa-users mr-1.5"></i>పాలక వర్గం
+                        <a href="#contact" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium text-xs md:text-sm px-5 py-3 rounded-xl transition">
+                            <i class="fa-solid fa-pen-to-square mr-1.5"></i>ఫిర్యాదు చేయండి
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Key Quick Facts Metric Bar -->
+            <!-- Key Metric Statistics -->
             <div class="max-w-7xl mx-auto px-4 -mt-8 relative z-10 w-full mb-12">
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
-                        <div class="text-lg md:text-xl font-bold text-slate-800">కౌతల (Kouthala)</div>
-                        <div class="text-[11px] text-slate-500">రెవెన్యూ మండలం</div>
+                        <div class="text-xl font-bold text-slate-800">4,266</div>
+                        <div class="text-[11px] text-slate-500">మొత్తం జనాభా (2011 సెన్సస్)</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
-                        <div class="text-lg md:text-xl font-bold text-slate-800">KB ఆసిఫాబాద్</div>
-                        <div class="text-[11px] text-slate-500">జిల్లా కేంద్రం</div>
+                        <div class="text-xl font-bold text-slate-800">841 హెక్టార్లు</div>
+                        <div class="text-[11px] text-slate-500">భౌగోళిక వైశాల్యం (8.41 చ.కి.మీ)</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
-                        <div class="text-lg md:text-xl font-bold text-slate-800">సిర్పూర్ (Sirpur)</div>
-                        <div class="text-[11px] text-slate-500">శాసనసభ నియోజకవర్గం</div>
+                        <div class="text-xl font-bold text-slate-800">569379</div>
+                        <div class="text-[11px] text-slate-500">గ్రామ LGD కోడ్</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
-                        <div class="text-lg md:text-xl font-bold text-slate-800">504299</div>
+                        <div class="text-xl font-bold text-slate-800">504299</div>
                         <div class="text-[11px] text-slate-500">పోస్టల్ పిన్ కోడ్</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Quick Cards into 6 Subpages -->
+            <!-- Leadership Highlights on Home Page -->
             <div class="max-w-7xl mx-auto px-4 mb-14">
                 <div class="text-center mb-8">
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">ముఖ్య విభాగాలు & పేజీలు</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">గ్రామ పంచాయతీ నాయకత్వం</h3>
                     <div class="w-12 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <a href="#about" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-tree-city"></i></div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">గ్రామ చరిత్ర & వివరాలు</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">ముత్తంపేట భౌగోళిక విస్తీర్ణం, జనాభా, వ్యవసాయం, సంస్కృతి మరియు చరిత్ర.</p>
-                        <span class="text-emerald-700 font-semibold text-xs flex items-center gap-1">పేజీ చూడండి <i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
-
-                    <a href="#governance" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-user-group"></i></div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">పాలక వర్గం & ప్రజాప్రతినిధులు</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">సర్పంచ్, ఉప సర్పంచ్, 8 వార్డు సభ్యులు, కార్యదర్శి మరియు గ్రామ సిబ్బంది జాబితా.</p>
-                        <span class="text-emerald-700 font-semibold text-xs flex items-center gap-1">పేజీ చూడండి <i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
-
-                    <a href="#infrastructure" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-school-flag"></i></div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">గ్రామ వసతులు & సంస్థలు</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">ప్రభుత్వ పాఠశాలలు, అంగన్‌వాడీ, రైతు వేదిక, వైకుంఠ ధామం, ప్రకృతి వనం వివరాలు.</p>
-                        <span class="text-emerald-700 font-semibold text-xs flex items-center gap-1">పేజీ చూడండి <i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
-
-                    <a href="#services" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">ప్రజా సేవలు & పథకాలు</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">మిషన్ భగీరథ, ఆసరా పింఛన్లు, జనన/మరణ సర్టిఫికెట్లు, ఉపాధి హామీ, ఇంటి పన్నులు.</p>
-                        <span class="text-emerald-700 font-semibold text-xs flex items-center gap-1">పేజీ చూడండి <i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
-
-                    <a href="#contact" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-comments"></i></div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">ప్రజా ఫిర్యాదుల పోర్టల్</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">తాగునీరు, డ్రైనేజీ, వీధి దీపాల సమస్యలపై ఆన్‌లైన్ అర్జీ నమోదు చేసి ట్రాక్ చేయండి.</p>
-                        <span class="text-emerald-700 font-semibold text-xs flex items-center gap-1">పేజీ చూడండి <i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
-
-                    <div class="bg-emerald-900 text-white p-6 rounded-2xl flex flex-col justify-between">
-                        <div>
-                            <span class="text-amber-300 text-[10px] font-bold uppercase tracking-wider">హెల్ప్‌లైన్</span>
-                            <h4 class="font-bold text-base mt-1">అత్యవసర కాంటాక్ట్స్</h4>
-                            <p class="text-xs text-emerald-100 mt-2">పోలీస్ (100), అంబులెన్స్ (108), విద్యుత్ (1912) తక్షణ సహాయం.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Sarpanch -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-4">
+                        <div class="w-20 h-20 rounded-full bg-emerald-100 border-2 border-emerald-600 flex items-center justify-center text-emerald-800 text-3xl shrink-0">
+                            <i class="fa-solid fa-user-tie"></i>
                         </div>
-                        <a href="#contact" class="mt-4 bg-emerald-700 hover:bg-emerald-600 text-center py-2 rounded-xl text-xs font-bold transition">ఫోన్ నంబర్లు చూడండి</a>
+                        <div class="text-center sm:text-left">
+                            <span class="bg-amber-100 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded">గ్రామ సర్పంచ్</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">రాంటెంకి. ఉష - మోతిరాం</h4>
+                            <p class="text-xs text-slate-500">ముత్తంపేట గ్రామ పంచాయతీ</p>
+                            <div class="mt-3 flex flex-wrap gap-2 justify-center sm:justify-start">
+                                <a href="tel:9640553492" class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 hover:bg-emerald-100">
+                                    <i class="fa-solid fa-phone"></i> 9640553492
+                                </a>
+                                <a href="tel:6303608609" class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 hover:bg-emerald-100">
+                                    <i class="fa-solid fa-phone"></i> 6303608609
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upa Sarpanch -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-4">
+                        <div class="w-20 h-20 rounded-full bg-emerald-100 border-2 border-emerald-600 flex items-center justify-center text-emerald-800 text-3xl shrink-0">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <span class="bg-slate-100 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded">ఉప సర్పంచ్</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">ఆడె . రామకృష్ణ</h4>
+                            <p class="text-xs text-slate-500">ముత్తంపేట గ్రామ పంచాయతీ</p>
+                            <div class="mt-3 flex flex-wrap gap-2 justify-center sm:justify-start">
+                                <a href="tel:6300876211" class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 hover:bg-emerald-100">
+                                    <i class="fa-solid fa-phone"></i> 6300876211
+                                </a>
+                                <a href="tel:9441851117" class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 hover:bg-emerald-100">
+                                    <i class="fa-solid fa-phone"></i> 9441851117
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PAGE 2: ABOUT VILLAGE ================= -->
+        <!-- ================= PAGE 2: CENSUS & VILLAGE PROFILE ================= -->
         <section id="page-about" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 2 : గ్రామ సమాచారం</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">ముత్తంపేట చరిత్ర, భౌగోళికం & జీవన విధానం</h2>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 2 : అధికారిక డేటా</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ సమగ్ర సమాచారం & 2011 జనాభా లెక్కలు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Left 2 Cols: Description & Census Table -->
                 <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
-                        <h3 class="text-lg font-bold text-emerald-950 mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-book-open-reader text-emerald-700"></i> ముత్తంపేట గ్రామ పరిచయం
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-base font-bold text-emerald-950 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-info text-emerald-700"></i> ముత్తంపేట భౌగోళిక వివరాలు
                         </h3>
                         <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4">
-                            ముత్తంపేట గ్రామం తెలంగాణ రాష్ట్రం, కొమరంభీం ఆసిఫాబాద్ జిల్లా పరిధిలోని కౌతల మండలంలో ఉన్న అందమైన వ్యవసాయ ఆధారిత గ్రామం. పచ్చని ప్రకృతి, చుట్టూ సారవంతమైన నల్లరేగడి నేలలు, అటవీ సంపద మరియు సహృదయతతో కూడిన గ్రామీణ వాతావరణం ఈ గ్రామ ప్రత్యేకత.
-                        </p>
-                        <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
-                            గ్రామంలోని ప్రజలు ప్రధానంగా పత్తి, సోయాబీన్, వరి, కంది పంటలను పండిస్తారు. గ్రామ పంచాయతీ పరిధిలో నిరంతరం తాగునీరు, పారిశుధ్యం, విద్యుత్ మరియు విద్యా వసతుల విస్తరణ జరుగుతున్నది.
+                            ముత్తంపేట (ముత్యంపేట / Muthampet) గ్రామం తెలంగాణ రాష్ట్రం, కొమురం భీం ఆసిఫాబాద్ జిల్లాలోని కౌతల మండల పరిధిలో ఉంది. ఈ గ్రామం కౌతల మండల కేంద్రం నుండి కేవలం <strong>3 కి.మీ</strong> దూరంలో మరియు ఉమ్మడి జిల్లా కేంద్రమైన ఆదిలాబాద్ నుండి దాదాపు <strong>202 కి.మీ</strong> దూరంలో ఉంది. సమీప పట్టణం కాగజ్‌నగర్ దాదాపు <strong>40 కి.మీ</strong> దూరంలో ఉంది. ముత్తంపేట గ్రామం ముత్తంపేట మరియు షిర్షా గ్రామ పంచాయతీలుగా విభజించబడి, ఎన్నికైన సర్పంచ్‌ల ఆధ్వర్యంలో సమర్థవంతంగా పాలించబడుతోంది.
                         </p>
                     </div>
 
-                    <!-- Cultural & Village Heritage -->
-                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
-                        <h3 class="text-lg font-bold text-emerald-950 mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-gopuram text-emerald-700"></i> సంస్కృతి & ఉత్సవాలు
+                    <!-- Official 2011 Census Table -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-table text-emerald-700"></i> ముత్తంపేట జనాభా వివరాలు (2011 Census of India)
                         </h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
-                            <div class="p-4 bg-emerald-50/60 rounded-xl border border-emerald-100">
-                                <h4 class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-bell text-amber-600 mr-1.5"></i>హనుమాన్ & పోచమ్మ ఆలయాలు</h4>
-                                <p class="text-slate-600">గ్రామంలోని ప్రధాన ఆలయాల వద్ద ప్రతీ సంవత్సరం జాతరలు, బోనాలు మరియు ప్రత్యేక పూజా కార్యక్రమాలు ఘనంగా జరుగుతాయి.</p>
-                            </div>
-                            <div class="p-4 bg-emerald-50/60 rounded-xl border border-emerald-100">
-                                <h4 class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-wheat-awn text-amber-600 mr-1.5"></i>రైతు పండుగలు</h4>
-                                <p class="text-slate-600">సంక్రాంతి, దసరా మరియు పోలాల అమావాస్య (ఎడ్ల పండుగ) గ్రామ ప్రజల సమైక్యతను చాటిచెప్పే సంప్రదాయ ఉత్సవాలు.</p>
-                            </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs border-collapse">
+                                <thead>
+                                    <tr class="bg-emerald-900 text-white">
+                                        <th class="p-3 rounded-tl-lg">విభాగం (Category)</th>
+                                        <th class="p-3">మొత్తం (Total)</th>
+                                        <th class="p-3">పురుషులు (Male)</th>
+                                        <th class="p-3 rounded-tr-lg">మహిళలు (Female)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 text-slate-700">
+                                    <tr class="bg-emerald-50/50 font-bold">
+                                        <td class="p-3">మొత్తం జనాభా (Total Population)</td>
+                                        <td class="p-3 text-emerald-800">4,266</td>
+                                        <td class="p-3">2,163</td>
+                                        <td class="p-3">2,103</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">చిన్నారుల జనాభా (0–6 సంవత్సరాలు)</td>
+                                        <td class="p-3">524</td>
+                                        <td class="p-3">280</td>
+                                        <td class="p-3">244</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">షెడ్యూల్డ్ కులాలు (SC)</td>
+                                        <td class="p-3">1,108</td>
+                                        <td class="p-3">559</td>
+                                        <td class="p-3">549</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">షెడ్యూల్డ్ తెగలు (ST)</td>
+                                        <td class="p-3">27</td>
+                                        <td class="p-3">11</td>
+                                        <td class="p-3">16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">అక్షరాస్యత గలవారు (Literates)</td>
+                                        <td class="p-3 text-emerald-700 font-semibold">1,786 (47.73%)</td>
+                                        <td class="p-3">1,109 (58.90%)</td>
+                                        <td class="p-3">677 (36.42%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">నిరక్షరాస్యులు (Illiterates)</td>
+                                        <td class="p-3">2,480</td>
+                                        <td class="p-3">1,054</td>
+                                        <td class="p-3">1,426</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-[11px] text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <div><strong>మొత్తం గృహాలు:</strong> 963 కుటుంబాలు</div>
+                            <div><strong>లింగ నిష్పత్తి:</strong> 972 (1,000 పురుషులకు)</div>
+                            <div><strong>సముద్ర మట్టం ఎత్తు:</strong> 187 మీటర్లు</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Statistics Box -->
+                <!-- Right Quick Stats Card -->
                 <div class="space-y-6">
                     <div class="bg-emerald-900 text-white p-6 rounded-2xl shadow-lg">
                         <h4 class="text-base font-bold mb-4 pb-2 border-b border-emerald-800 text-amber-300 flex items-center gap-2">
-                            <i class="fa-solid fa-chart-pie"></i> గ్రామ కీలక గణాంకాలు
+                            <i class="fa-solid fa-location-crosshairs"></i> ముఖ్య కోడ్‌లు & వివరాలు
                         </h4>
                         <ul class="space-y-3 text-xs">
                             <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">మండలం:</span>
-                                <span class="font-semibold">కౌతల (Kouthala)</span>
+                                <span class="text-emerald-200">LGD Village Code:</span>
+                                <span class="font-bold">569379</span>
                             </li>
                             <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">జిల్లా:</span>
-                                <span class="font-semibold">కొమరంభీం ఆసిఫాబాద్</span>
+                                <span class="text-emerald-200">మొత్తం వైశాల్యం:</span>
+                                <span class="font-bold">841 హెక్టార్లు (8.41 km²)</span>
                             </li>
                             <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">వార్డుల సంఖ్య:</span>
-                                <span class="font-semibold">8 వార్డులు</span>
+                                <span class="text-emerald-200">పోస్టల్ పిన్ కోడ్:</span>
+                                <span class="font-bold">504299</span>
                             </li>
                             <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">ప్రధాన భాష:</span>
-                                <span class="font-semibold">తెలుగు (Telugu)</span>
+                                <span class="text-emerald-200">సమీప పోస్టాఫీస్:</span>
+                                <span class="font-bold">Sirpur (T) SO</span>
                             </li>
                             <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">పోస్టాఫీస్:</span>
-                                <span class="font-semibold">కౌతల SO (504299)</span>
+                                <span class="text-emerald-200">STD కోడ్:</span>
+                                <span class="font-bold">08738</span>
                             </li>
                             <li class="flex justify-between">
-                                <span class="text-emerald-200">పోలీస్ స్టేషన్:</span>
-                                <span class="font-semibold">కౌతల PS</span>
+                                <span class="text-emerald-200">సమీప పట్టణం:</span>
+                                <span class="font-bold">కాగజ్‌నగర్ (40 km)</span>
                             </li>
                         </ul>
                     </div>
-
-                    <!-- Boundaries card -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-xs text-slate-700">
-                        <h5 class="font-bold text-slate-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-compass text-emerald-700"></i> సరిహద్దులు (Boundaries)</h5>
-                        <p class="mb-1"><strong>తూర్పు:</strong> కౌతల మండల కేంద్రం పొలాలు</p>
-                        <p class="mb-1"><strong>పశ్చిమం:</strong> సిర్పూర్ అటవీ సరిహద్దు</p>
-                        <p class="mb-1"><strong>ఉత్తరం:</strong> వాగు పరివాహక ప్రాంతం</p>
-                        <p><strong>దక్షిణం:</strong> గ్రామీణ రహదారి మార్గం</p>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PAGE 3: GOVERNANCE ================= -->
+        <!-- ================= PAGE 3: ELECTED BODY & PHONE NUMBERS ================= -->
         <section id="page-governance" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 3 : గ్రామ నాయకత్వం</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">పంచాయతీ పాలక వర్గం & ప్రజాప్రతినిధులు</h2>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 3 : గ్రామ పంచాయతీ డైరెక్టరీ</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ పంచాయతీ పాలక వర్గం & ఫోన్ నంబర్లు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
-                <p class="text-xs text-slate-500 mt-2">ముత్తంపేట గ్రామ పరిపాలన మరియు ప్రజాప్రతినిధుల సంపూర్ణ వివరాలు</p>
+                <p class="text-xs text-slate-500 mt-2">ముత్తంపేట గ్రామ ప్రజలకు 24x7 అందుబాటులో ఉండే ప్రజాప్రతినిధులు</p>
             </div>
 
-            <!-- Key Trio Administration -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <!-- Sarpanch -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition">
-                    <div class="w-24 h-24 mx-auto rounded-full bg-slate-100 border-2 border-emerald-600 flex items-center justify-center text-slate-400 text-4xl mb-4">
-                        <i class="fa-solid fa-user-tie"></i>
+            <!-- Sarpanch & Upa-Sarpanch Top Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <!-- Sarpanch Card -->
+                <div class="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white rounded-2xl p-6 shadow-md">
+                    <div class="flex items-center gap-4">
+                        <div class="w-20 h-20 rounded-2xl bg-white/10 border-2 border-amber-300 flex items-center justify-center text-amber-300 text-3xl shrink-0">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <span class="bg-amber-400 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded">సర్పంచ్ (Sarpanch)</span>
+                            <h4 class="text-xl font-bold mt-1">రాంటెంకి. ఉష - మోతిరాం</h4>
+                            <p class="text-xs text-emerald-200">ముత్తంపేట గ్రామ పంచాయతీ</p>
+                        </div>
                     </div>
-                    <span class="bg-amber-100 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full">ప్రథమ పౌరులు</span>
-                    <h4 class="text-lg font-bold text-slate-900 mt-2">[ సర్పంచ్ పేరు ఇక్కడ రాయండి ]</h4>
-                    <p class="text-xs text-emerald-700 font-semibold">సర్పంచ్, ముత్తంపేట గ్రామ పంచాయతీ</p>
-                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600 space-y-1">
-                        <p><i class="fa-solid fa-phone text-emerald-600 mr-1.5"></i>ఫోన్: +91 9XXXX XXXXX</p>
-                        <p><i class="fa-solid fa-calendar-check text-emerald-600 mr-1.5"></i>అందుబాటు: ప్రతిరోజూ 10:00 AM - 1:00 PM</p>
-                    </div>
-                </div>
-
-                <!-- Secretary -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition">
-                    <div class="w-24 h-24 mx-auto rounded-full bg-slate-100 border-2 border-emerald-600 flex items-center justify-center text-slate-400 text-4xl mb-4">
-                        <i class="fa-solid fa-user-gear"></i>
-                    </div>
-                    <span class="bg-emerald-100 text-emerald-900 text-[10px] font-bold px-2 py-0.5 rounded-full">ప్రభుత్వ అధికారి</span>
-                    <h4 class="text-lg font-bold text-slate-900 mt-2">[ కార్యదర్శి పేరు ఇక్కడ రాయండి ]</h4>
-                    <p class="text-xs text-emerald-700 font-semibold">పంచాయతీ కార్యదర్శి (P.S)</p>
-                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600 space-y-1">
-                        <p><i class="fa-solid fa-phone text-emerald-600 mr-1.5"></i>ఫోన్: +91 9XXXX XXXXX</p>
-                        <p><i class="fa-solid fa-id-card text-emerald-600 mr-1.5"></i>రికార్డులు & ప్రభుత్వ పథకాల ధృవీకరణ</p>
+                    <div class="mt-6 pt-4 border-t border-emerald-700 flex flex-wrap gap-3">
+                        <a href="tel:9640553492" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 shadow">
+                            <i class="fa-solid fa-phone"></i> 9640553492
+                        </a>
+                        <a href="tel:6303608609" class="bg-white/20 hover:bg-white/30 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 border border-white/30">
+                            <i class="fa-solid fa-phone"></i> 6303608609
+                        </a>
                     </div>
                 </div>
 
-                <!-- Upa-Sarpanch -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition">
-                    <div class="w-24 h-24 mx-auto rounded-full bg-slate-100 border-2 border-emerald-600 flex items-center justify-center text-slate-400 text-4xl mb-4">
-                        <i class="fa-solid fa-users"></i>
+                <!-- Upa-Sarpanch Card -->
+                <div class="bg-gradient-to-br from-slate-900 to-emerald-950 text-white rounded-2xl p-6 shadow-md">
+                    <div class="flex items-center gap-4">
+                        <div class="w-20 h-20 rounded-2xl bg-white/10 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-3xl shrink-0">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">ఉప సర్పంచ్ (Upa-Sarpanch)</span>
+                            <h4 class="text-xl font-bold mt-1">ఆడె . రామకృష్ణ</h4>
+                            <p class="text-xs text-slate-300">ముత్తంపేట గ్రామ పంచాయతీ</p>
+                        </div>
                     </div>
-                    <span class="bg-slate-100 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full">పాలక వర్గం</span>
-                    <h4 class="text-lg font-bold text-slate-900 mt-2">[ ఉప-సర్పంచ్ పేరు ఇక్కడ రాయండి ]</h4>
-                    <p class="text-xs text-emerald-700 font-semibold">ఉప సర్పంచ్, ముత్తంపేట</p>
-                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600 space-y-1">
-                        <p><i class="fa-solid fa-phone text-emerald-600 mr-1.5"></i>ఫోన్: +91 9XXXX XXXXX</p>
-                        <p><i class="fa-solid fa-handshake text-emerald-600 mr-1.5"></i>వార్డుల సమన్వయం & ప్రజా సమస్యలు</p>
+                    <div class="mt-6 pt-4 border-t border-slate-700 flex flex-wrap gap-3">
+                        <a href="tel:6300876211" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 shadow">
+                            <i class="fa-solid fa-phone"></i> 6300876211
+                        </a>
+                        <a href="tel:9441851117" class="bg-white/20 hover:bg-white/30 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 border border-white/30">
+                            <i class="fa-solid fa-phone"></i> 9441851117
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Complete 8 Ward Members Directory -->
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 mb-12">
+            <!-- Complete 11 Ward Members Table & Cards -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 mb-10">
                 <h3 class="text-base md:text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-users-viewfinder text-emerald-700"></i> ముత్తంపేట వార్డు సభ్యుల జాబితా (Ward Members)
+                    <i class="fa-solid fa-address-book text-emerald-700"></i> వార్డు సభ్యుల సంపూర్ణ జాబితా & కాల్ బటన్లు
                 </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 1</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">గ్రామ ప్రధాన వీధి</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Ward 1 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">1వ వార్డు మెంబర్</span>
+                            <a href="tel:7981677785" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">గోమాసి . మమత</h4>
+                        <a href="tel:7981677785" class="text-xs text-emerald-700 font-bold mt-1 inline-block">7981677785</a>
                     </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 2</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">పాఠశాల ఏరియా</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 3</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">రైతు కాలనీ</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 4</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">పాత బస్తీ వీధి</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 5</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">హనుమాన్ నగర్</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 6</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">వాటర్ ట్యాంక్ రోడ్</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 7</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">అంబేద్కర్ కాలనీ</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded">వార్డు నం. 8</span>
-                        <h5 class="font-bold text-xs text-slate-800 mt-2">[ సభ్యుని పేరు ]</h5>
-                        <p class="text-[11px] text-slate-500">వ్యవసాయ సరిహద్దు కాలనీ</p>
-                        <p class="text-[11px] text-emerald-700 font-semibold mt-1"><i class="fa-solid fa-phone mr-1"></i>9XXXX XXXXX</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Field Functionaries & Support Staff -->
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
-                <h3 class="text-base md:text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-id-badge text-emerald-700"></i> గ్రామ సేవకులు & క్షేత్రస్థాయి సిబ్బంది
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-emerald-700 font-bold block mb-1">కారోబార్ / బిల్ కలెక్టర్</span>
-                        <h6 class="font-bold text-slate-800">[ పేరు ఇక్కడ రాయండి ]</h6>
-                        <p class="text-slate-500 text-[11px]">పన్ను వసూలు & వాటర్ వర్క్స్</p>
-                        <p class="text-emerald-800 font-semibold mt-2">ఫోన్: 9XXXX XXXXX</p>
+                    <!-- Ward 2 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">2వ వార్డు మెంబర్</span>
+                            <a href="tel:9573292447" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">జంగంపెల్లి . మహేందర్</h4>
+                        <a href="tel:9573292447" class="text-xs text-emerald-700 font-bold mt-1 inline-block">9573292447</a>
                     </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-emerald-700 font-bold block mb-1">ఆశా కార్యకర్త (ASHA Worker)</span>
-                        <h6 class="font-bold text-slate-800">[ పేరు ఇక్కడ రాయండి ]</h6>
-                        <p class="text-slate-500 text-[11px]">గర్భిణీలు & చిన్నారుల ఆరోగ్యం</p>
-                        <p class="text-emerald-800 font-semibold mt-2">ఫోన్: 9XXXX XXXXX</p>
+
+                    <!-- Ward 3 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">3వ వార్డు మెంబర్</span>
+                            <a href="tel:7893400393" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">పులబోగి . శైలజ</h4>
+                        <a href="tel:7893400393" class="text-xs text-emerald-700 font-bold mt-1 inline-block">7893400393</a>
                     </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-emerald-700 font-bold block mb-1">అంగన్‌వాడీ టీచర్</span>
-                        <h6 class="font-bold text-slate-800">[ పేరు ఇక్కడ రాయండి ]</h6>
-                        <p class="text-slate-500 text-[11px]">బాలల పోషకాహారం & పూర్వ ప్రాథమిక విద్య</p>
-                        <p class="text-emerald-800 font-semibold mt-2">ఫోన్: 9XXXX XXXXX</p>
+
+                    <!-- Ward 4 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">4వ వార్డు మెంబర్</span>
+                            <a href="tel:9010264881" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">గోగర్ల . పున్నయ్య</h4>
+                        <a href="tel:9010264881" class="text-xs text-emerald-700 font-bold mt-1 inline-block">9010264881</a>
                     </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <span class="text-emerald-700 font-bold block mb-1">వ్యవసాయ విస్తరణ అధికారి (AEO)</span>
-                        <h6 class="font-bold text-slate-800">[ పేరు ఇక్కడ రాయండి ]</h6>
-                        <p class="text-slate-500 text-[11px]">రైతు పంటల సలహాలు & ఎరువులు</p>
-                        <p class="text-emerald-800 font-semibold mt-2">ఫోన్: 9XXXX XXXXX</p>
+
+                    <!-- Ward 5 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">5వ వార్డు మెంబర్</span>
+                            <a href="tel:9392532558" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">దోని . బుజ్జక్క</h4>
+                        <a href="tel:9392532558" class="text-xs text-emerald-700 font-bold mt-1 inline-block">9392532558</a>
+                    </div>
+
+                    <!-- Ward 6 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">6వ వార్డు మెంబర్</span>
+                            <a href="tel:6281043279" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">సెండె . తేజ</h4>
+                        <a href="tel:6281043279" class="text-xs text-emerald-700 font-bold mt-1 inline-block">6281043279</a>
+                    </div>
+
+                    <!-- Ward 7 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">7వ వార్డు మెంబర్</span>
+                            <a href="tel:8309218054" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">ఆడె . చిన్నూబాయి</h4>
+                        <a href="tel:8309218054" class="text-xs text-emerald-700 font-bold mt-1 inline-block">8309218054</a>
+                    </div>
+
+                    <!-- Ward 8 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">8వ వార్డు మెంబర్</span>
+                            <a href="tel:9948071988" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">పెరుగు . అనిత</h4>
+                        <a href="tel:9948071988" class="text-xs text-emerald-700 font-bold mt-1 inline-block">9948071988</a>
+                    </div>
+
+                    <!-- Ward 10 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">10వ వార్డు మెంబర్</span>
+                            <a href="tel:7893883348" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">జాడి . సాయికృష్ణ</h4>
+                        <a href="tel:7893883348" class="text-xs text-emerald-700 font-bold mt-1 inline-block">7893883348</a>
+                    </div>
+
+                    <!-- Ward 11 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">11వ వార్డు మెంబర్</span>
+                            <a href="tel:9573873102" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">డోంగ్రి . పుండలిక్</h4>
+                        <a href="tel:9573873102" class="text-xs text-emerald-700 font-bold mt-1 inline-block">9573873102</a>
+                    </div>
+
+                    <!-- Ward 12 -->
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-emerald-500 transition">
+                        <div class="flex justify-between items-start">
+                            <span class="bg-emerald-700 text-white font-bold text-[10px] px-2 py-0.5 rounded">12వ వార్డు మెంబర్</span>
+                            <a href="tel:9951104606" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center hover:bg-emerald-700 hover:text-white transition"><i class="fa-solid fa-phone text-xs"></i></a>
+                        </div>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">తొగం . విఠల్</h4>
+                        <a href="tel:9951104606" class="text-xs text-emerald-700 font-bold mt-1 inline-block">9951104606</a>
+                    </div>
+
+                    <!-- MPTC & Secretary Cards -->
+                    <div class="p-4 bg-emerald-50/70 rounded-xl border border-emerald-200">
+                        <span class="bg-emerald-800 text-white font-bold text-[10px] px-2 py-0.5 rounded">MPTC & కార్యదర్శి</span>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">పంచాయతీ కార్యదర్శి / MPTC</h4>
+                        <p class="text-[11px] text-slate-600">కార్యాలయ పరిపాలన</p>
+                        <a href="#contact" class="text-xs text-emerald-800 font-bold mt-1 inline-block underline">ఆఫీస్ సంప్రదించండి</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PAGE 4: INFRASTRUCTURE ================= -->
-        <section id="page-infrastructure" class="page-view py-12 px-4 max-w-7xl mx-auto">
+        <!-- ================= PAGE 4: REPRESENTATIVES (MLA & MP) ================= -->
+        <section id="page-representatives" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 4 : సౌకర్యాలు & అభివృద్ధి</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">ముత్తంపేట గ్రామ వసతులు & విద్యా సంస్థలు</h2>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 4 : ఉన్నత ప్రజాప్రతినిధులు</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">శాసనసభ్యులు & పార్లమెంట్ సభ్యుల వివరాలు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <!-- 1. School -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h4 class="font-bold text-base text-slate-800 mb-1">ప్రభుత్వ ప్రాథమిక పాఠశాల (MPPS)</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామంలోని చిన్నారుల కొరకు నాణ్యమైన విద్య, మధ్యాహ్న భోజనం మరియు డిజిటల్ తరగతి గదుల సౌకర్యం ఉంది.</p>
-                    <span class="text-[11px] bg-sky-50 text-sky-800 font-semibold px-2 py-0.5 rounded">1 నుండి 5వ తరగతి</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- MLA Card -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-800 text-3xl font-bold">
+                            <i class="fa-solid fa-landmark-flag"></i>
+                        </div>
+                        <div>
+                            <span class="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded">శాసనసభ్యులు (MLA)</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">డా. పాల్వాయి హరీష్ బాబు</h3>
+                            <p class="text-xs text-slate-500 font-medium">Dr. Palvai Harish Babu</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs space-y-2 border-t border-slate-100 pt-4 text-slate-600">
+                        <li><strong>అసెంబ్లీ నియోజకవర్గం:</strong> సిర్పూర్ (Sirpur Assembly Constituency)</li>
+                        <li><strong>జిల్లా:</strong> కొమురం భీం ఆసిఫాబాద్</li>
+                        <li><strong>పాత్ర:</strong> నియోజకవర్గ సమగ్రాభివృద్ధి మరియు నిధుల మంజూరు</li>
+                    </ul>
                 </div>
 
-                <!-- 2. Anganwadi Center -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-800 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-shapes"></i></div>
-                    <h4 class="font-bold text-base text-slate-800 mb-1">అంగన్‌వాడీ కేంద్రం</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గర్భిణీ స్త్రీలకు, బాలింతలకు పౌష్టికాహారం పంపిణీ మరియు చిన్న పిల్లలకు ఆటపాటలతో కూడిన పూర్వ ప్రాథమిక విద్య.</p>
-                    <span class="text-[11px] bg-pink-50 text-pink-800 font-semibold px-2 py-0.5 rounded">ఆరోగ్య లక్ష్మి పథకం</span>
-                </div>
-
-                <!-- 3. Rythu Vedika -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-tractor"></i></div>
-                    <h4 class="font-bold text-base text-slate-800 mb-1">రైతు వేదిక (Rythu Vedika)</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">రైతులు సమావేశమై వ్యవసాయ పద్ధతులు చర్చించుకోవడానికి, ఎరువులు మరియు కొత్త విత్తనాల సమాచారం పొందే కేంద్రం.</p>
-                    <span class="text-[11px] bg-amber-50 text-amber-800 font-semibold px-2 py-0.5 rounded">రైతు సేవా కేంద్రం</span>
-                </div>
-
-                <!-- 4. Palle Prakruthi Vanam -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-tree"></i></div>
-                    <h4 class="font-bold text-base text-slate-800 mb-1">పల్లె ప్రకృతి వనం & నర్సరీ</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామంలో పచ్చదనం మరియు ఆహ్లాదకరమైన వాతావరణం కోసం నిర్మించిన అందమైన పార్క్, వాకింగ్ ట్రాక్ మరియు మొక్కల నర్సరీ.</p>
-                    <span class="text-[11px] bg-emerald-50 text-emerald-800 font-semibold px-2 py-0.5 rounded">హరిత హారం ప్రాజెక్ట్</span>
-                </div>
-
-                <!-- 5. Vaikunta Dhamam -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-peace"></i></div>
-                    <h4 class="font-bold text-base text-slate-800 mb-1">వైకుంఠ ధామం</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">అన్ని సదుపాయాలతో కూడిన శ్మశాన వాటిక, నీటి సౌకర్యం, లైటింగ్ మరియు విశ్రాంతి షెడ్ల నిర్మాణం పూర్తయింది.</p>
-                    <span class="text-[11px] bg-purple-50 text-purple-800 font-semibold px-2 py-0.5 rounded">గ్రామీణ సదుపాయం</span>
-                </div>
-
-                <!-- 6. Solid Waste Shed -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-recycle"></i></div>
-                    <h4 class="font-bold text-base text-slate-800 mb-1">డంప్ యార్డ్ & కంపోస్ట్ షెడ్</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">తడి చెత్త, పొడి చెత్త విభజన కేంద్రం మరియు సహజ సేంద్రీయ ఎరువు తయారీ (Compost Plant) యూనిట్.</p>
-                    <span class="text-[11px] bg-teal-50 text-teal-800 font-semibold px-2 py-0.5 rounded">స్వచ్ఛ గ్రామం</span>
+                <!-- MP Card -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-20 h-20 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 text-3xl font-bold">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <span class="bg-amber-100 text-amber-900 text-[11px] font-bold px-2 py-0.5 rounded">పార్లమెంట్ సభ్యులు (MP)</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">గోడం నగేష్ గారు</h3>
+                            <p class="text-xs text-slate-500 font-medium">Godam Nagesh</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs space-y-2 border-t border-slate-100 pt-4 text-slate-600">
+                        <li><strong>పార్లమెంటరీ నియోజకవర్గం:</strong> ఆదిలాబాద్ (Adilabad Lok Sabha)</li>
+                        <li><strong>రాష్ట్రం:</strong> తెలంగాణ</li>
+                        <li><strong>పాత్ర:</strong> జాతీయ రహదారులు, కేంద్ర నిధులు & గిరిజన/గ్రామీణాభివృద్ధి</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PAGE 5: WELFARE & SERVICES ================= -->
+        <!-- ================= PAGE 5: SERVICES & SCHEMES ================= -->
         <section id="page-services" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 5 : ప్రభుత్వ సంక్షేమం</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ సేవలు & సంక్షేమ పథకాల మార్గదర్శకాలు</h2>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 5 : ప్రభుత్వ సేవలు</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ సేవలు & సంక్షేమ పథకాలు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
             </div>
 
-            <!-- Service Details Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                <!-- 1. Mission Bhagiratha -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
-                    <div class="text-3xl text-emerald-700 shrink-0"><i class="fa-solid fa-faucet-drip"></i></div>
-                    <div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">మిషన్ భగీరథ తాగునీటి నిర్వహణ</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">గ్రామంలోని ప్రతి ఇంటికీ రోజువారీ శుద్ధి చేసిన రక్షిత మంచినీటి సరఫరా. పైపులైన్ లీకేజీలు లేదా నల్లా కనెక్షన్ల కొరకు పంచాయతీ కార్యాలయంలో సంప్రదించండి.</p>
-                        <span class="text-[11px] font-semibold text-emerald-800">ఫిర్యాదు కాలపరిమితి: 24 గంటల్లో మరమ్మతు</span>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h4 class="font-bold text-slate-800 text-base mb-1">మిషన్ భగీరథ తాగునీరు</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">ముత్తంపేట ప్రతి గడపకూ శుద్ధ తాగునీరు సరఫరా. పైపులైన్ లీకేజీ సమస్యలకు పంచాయతీలో ఫిర్యాదు చేయండి.</p>
                 </div>
 
-                <!-- 2. Aasara Pensions -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
-                    <div class="text-3xl text-emerald-700 shrink-0"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                    <div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">ఆసరా పింఛన్ల పంపిణీ & దరఖాస్తులు</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">వృద్ధాప్య, వితంతు, దివ్యాంగుల మరియు ఒంటరి మహిళల పింఛన్ల చెల్లింపులు ప్రతి నెలా పంచాయతీ కార్యాలయం వద్ద బయోమెట్రిక్ ద్వారా జరుగుతాయి.</p>
-                        <span class="text-[11px] font-semibold text-emerald-800">అర్హత: ఆధార్ & నివాస ధృవీకరణ</span>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h4 class="font-bold text-slate-800 text-base mb-1">ఆసరా పింఛన్లు</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">వృద్ధులు, వితంతువులు, దివ్యాంగులకు ప్రభుత్వం అందించే నెలవారీ పింఛన్ల పంపిణీ సమన్వయం.</p>
                 </div>
 
-                <!-- 3. Certificates -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
-                    <div class="text-3xl text-emerald-700 shrink-0"><i class="fa-solid fa-certificate"></i></div>
-                    <div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">జనన / మరణ / నివాస ధృవీకరణ పత్రాలు</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">గ్రామ పంచాయతీ కార్యదర్శి ద్వారా జనన, మరణ రికార్డు నమోదు మరియు అధికారిక సర్టిఫికెట్ల జారీ సకాలంలో అందించబడును.</p>
-                        <span class="text-[11px] font-semibold text-emerald-800">రుసుము: ప్రభుత్వ నిబంధనల ప్రకారం</span>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-file-signature"></i></div>
+                    <h4 class="font-bold text-slate-800 text-base mb-1">జనన & మరణ సర్టిఫికెట్లు</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">పంచాయతీ కార్యదర్శి ద్వారా జనన, మరణ రికార్డు నమోదు మరియు అధికారిక ధృవీకరణ పత్రాల జారీ.</p>
                 </div>
 
-                <!-- 4. NREGS Jobs -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
-                    <div class="text-3xl text-emerald-700 shrink-0"><i class="fa-solid fa-person-digging"></i></div>
-                    <div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">మహాత్మా గాంధీ ఉపాధి హామీ పథకం (MGNREGS)</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">జాబ్ కార్డు ఉన్న కూలీలకు గ్రామంలో కాలువల పూడికతీత, ఇంకుడు గుంతల నిర్మాణం మరియు మొక్కల నాటే పనులలో 100 రోజుల పని కల్పన.</p>
-                        <span class="text-[11px] font-semibold text-emerald-800">సమన్వయ అధికారి: ఫీల్డ్ అసిస్టెంట్</span>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-person-digging"></i></div>
+                    <h4 class="font-bold text-slate-800 text-base mb-1">ఉపాధి హామీ పథకం (MGNREGS)</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ కూలీలకు 100 రోజుల పని కల్పన, చెరువుల పూడికతీత మరియు హరితహారం మొక్కల పెంపకం.</p>
                 </div>
 
-                <!-- 5. Tax Payment -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
-                    <div class="text-3xl text-emerald-700 shrink-0"><i class="fa-solid fa-receipt"></i></div>
-                    <div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">ఇంటి పన్ను & లైసెన్సులు</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">ఇంటి పన్ను మరియు నల్లా పన్నులను సకాలంలో చెల్లించి అధికారిక రసీదు పొందండి. మీ పన్నులే మన ముత్తంపేట అభివృద్ధికి పునాది.</p>
-                        <span class="text-[11px] font-semibold text-emerald-800">ఆన్‌లైన్ & ఆఫ్‌లైన్ రసీదులు</span>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-receipt"></i></div>
+                    <h4 class="font-bold text-slate-800 text-base mb-1">ఇంటి పన్ను & అనుమతులు</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ పంచాయతీ ఇంటి పన్ను రసీదులు మరియు నూతన నివాస నిర్మాణ పర్మిషన్లు.</p>
                 </div>
 
-                <!-- 6. Rythu Bharosa -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
-                    <div class="text-3xl text-emerald-700 shrink-0"><i class="fa-solid fa-seedling"></i></div>
-                    <div>
-                        <h4 class="font-bold text-base text-slate-800 mb-1">రైతు సంక్షేమం & పంట రుణమాఫీ</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">వ్యవసాయ విస్తరణ అధికారి ద్వారా పంట నమోదు (Crop Booking), ఎరువుల రాయితీ మరియు రైతు బీమా నామినేషన్ల సహాయం.</p>
-                        <span class="text-[11px] font-semibold text-emerald-800">రైతు వేదిక వద్ద సంప్రదించండి</span>
-                    </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-tractor"></i></div>
+                    <h4 class="font-bold text-slate-800 text-base mb-1">రైతు సంక్షేమ సహాయం</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">రైతు భరోసా, ఎరువుల సమాచారం మరియు పంట నష్ట పరిహార నమోదు సహాయం.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PAGE 6: CONTACT & GRIEVANCE ================= -->
+        <!-- ================= PAGE 6: GRIEVANCE PORTAL & EMERGENCY ================= -->
         <section id="page-contact" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
                 <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 6 : సమస్యల పరిష్కారం</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">ప్రజా సమస్యల పరిష్కార వేదిక & సంప్రదించండి</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">ముత్తంపేట ప్రజా ఫిర్యాదుల పోర్టల్ & కాంటాక్ట్</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
-                <p class="text-xs text-slate-500 mt-2">తాగునీరు, పారిశుధ్యం, వీధి దీపాల సమస్యలపై ఆన్‌లైన్ ఫిర్యాదును నమోదు చేయండి</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -595,12 +628,12 @@
                     <h3 class="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
                         <i class="fa-solid fa-pen-to-square text-emerald-700"></i> ఆన్‌లైన్ సమస్య నమోదు ఫారం
                     </h3>
-                    <p class="text-xs text-slate-500 mb-6">మీ సమస్య వివరాలు నమోదు చేయండి. తక్షణమే పంచాయతీ కార్యదర్శికి SMS ద్వారా సమాచారం చేరుతుంది.</p>
+                    <p class="text-xs text-slate-500 mb-6">మీ సమస్యను ఇక్కడ నమోదు చేయండి. నేరుగా సర్పంచ్ గారి కార్యాలయానికి చేరుతుంది.</p>
 
                     <form onsubmit="handleGrievanceSubmit(event)" class="space-y-4 text-xs">
                         <div>
-                            <label class="block text-slate-700 font-semibold mb-1">మీ పూర్తి పేరు (Citizen Name)*</label>
-                            <input type="text" id="g-name" required placeholder="ఉదాహరణ: రమేష్" class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600">
+                            <label class="block text-slate-700 font-semibold mb-1">మీ పేరు (Citizen Name)*</label>
+                            <input type="text" id="g-name" required placeholder="మీ పూర్తి పేరు నమోదు చేయండి" class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600">
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
@@ -608,33 +641,28 @@
                                 <input type="tel" id="g-phone" required placeholder="10 అంకెల మొబైల్ నంబర్" class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600">
                             </div>
                             <div>
-                                <label class="block text-slate-700 font-semibold mb-1">మీ వార్డు సంఖ్య (Ward No)*</label>
+                                <label class="block text-slate-700 font-semibold mb-1">వార్డు సంఖ్య (Ward No)*</label>
                                 <select id="g-ward" class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 bg-white">
-                                    <option>వార్డు నం. 1</option>
-                                    <option>వార్డు నం. 2</option>
-                                    <option>వార్డు నం. 3</option>
-                                    <option>వార్డు నం. 4</option>
-                                    <option>వార్డు నం. 5</option>
-                                    <option>వార్డు నం. 6</option>
-                                    <option>వార్డు నం. 7</option>
-                                    <option>వార్డు నం. 8</option>
+                                    <option>1వ వార్డు</option><option>2వ వార్డు</option><option>3వ వార్డు</option>
+                                    <option>4వ వార్డు</option><option>5వ వార్డు</option><option>6వ వార్డు</option>
+                                    <option>7వ వార్డు</option><option>8వ వార్డు</option><option>10వ వార్డు</option>
+                                    <option>11వ వార్డు</option><option>12వ వార్డు</option>
                                 </select>
                             </div>
                         </div>
                         <div>
                             <label class="block text-slate-700 font-semibold mb-1">సమస్య రకం (Category)*</label>
                             <select id="g-category" class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 bg-white">
-                                <option>తాగునీటి సరఫరా / పైపులైన్ లీకేజ్</option>
+                                <option>తాగునీరు / మిషన్ భగీరథ లీకేజ్</option>
                                 <option>వీధి దీపాలు వెలగకపోవడం</option>
-                                <option>మురుగు కాలువలు / చెత్త సేకరణ</option>
+                                <option>మురుగు కాలువలు & పారిశుధ్యం</option>
                                 <option>ఆసరా పింఛన్ సమస్య</option>
-                                <option>రోడ్ల మరమ్మతులు</option>
                                 <option>ఇతర సమస్యలు</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-slate-700 font-semibold mb-1">సమస్య పూర్తి వివరాలు & ఇంటి చిరునామా*</label>
-                            <textarea id="g-message" rows="3" required placeholder="మీ వీధి పేరు, ఇంటి నంబర్ మరియు సమస్య గురించి రాయండి..." class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600"></textarea>
+                            <label class="block text-slate-700 font-semibold mb-1">సమస్య వివరాలు*</label>
+                            <textarea id="g-message" rows="3" required placeholder="సమస్య పూర్తి వివరాలు ఇక్కడ రాయండి..." class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3.5 rounded-xl shadow transition">
                             ఫిర్యాదు సమర్పించండి (Submit Request)
@@ -643,19 +671,19 @@
                     <div id="grievance-alert" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs"></div>
                 </div>
 
-                <!-- Office Contact Directory -->
+                <!-- Emergency Numbers & Address -->
                 <div class="space-y-6">
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-xs">
                         <h4 class="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-building-flag text-emerald-700"></i> పంచాయతీ కార్యాలయం చిరునామా
+                            <i class="fa-solid fa-location-dot text-emerald-700"></i> పంచాయతీ కార్యాలయ చిరునామా
                         </h4>
                         <p class="text-slate-600 leading-relaxed mb-3">
                             గ్రామ పంచాయతీ కార్యాలయం,<br>
-                            ముత్తంపేట గ్రామం, కౌతల మండలం,<br>
-                            కొమరంభీం ఆసిఫాబాద్ జిల్లా, తెలంగాణ రాష్ట్రం - 504299.
+                            ముత్తంపేట (ముత్యంపేట) గ్రామం, కౌతల మండలం,<br>
+                            కొమురం భీం ఆసిఫాబాద్ జిల్లా, తెలంగాణ రాష్ట్రం - 504299.
                         </p>
                         <div class="pt-3 border-t border-slate-100 text-slate-500">
-                            <strong>పనివేళలు:</strong> ఉదయం 10:00 నుండి సాయంత్రం 5:00 వరకు (ప్రభుత్వ పనిదినాలు)
+                            <strong>పనివేళలు:</strong> ఉదయం 10:00 నుండి సాయంత్రం 5:00 వరకు
                         </div>
                     </div>
 
@@ -666,15 +694,15 @@
                         </h4>
                         <div class="grid grid-cols-2 gap-3 text-xs">
                             <a href="tel:100" class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 hover:bg-emerald-50 transition">
-                                <span class="font-semibold text-slate-700">పోలీస్</span>
+                                <span class="font-semibold text-slate-700">పోలీస్ (Police)</span>
                                 <span class="font-bold text-emerald-800">100</span>
                             </a>
                             <a href="tel:108" class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 hover:bg-emerald-50 transition">
-                                <span class="font-semibold text-slate-700">అంబులెన్స్</span>
+                                <span class="font-semibold text-slate-700">అంబులెన్స్ (Ambulance)</span>
                                 <span class="font-bold text-emerald-800">108</span>
                             </a>
                             <a href="tel:181" class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 hover:bg-emerald-50 transition">
-                                <span class="font-semibold text-slate-700">మహిళా సహాయం</span>
+                                <span class="font-semibold text-slate-700">మహిళా హెల్ప్‌లైన్</span>
                                 <span class="font-bold text-emerald-800">181</span>
                             </a>
                             <a href="tel:1912" class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 hover:bg-emerald-50 transition">
@@ -694,15 +722,15 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <div>
                 <p class="font-bold text-slate-100 text-sm">ముత్తంపేట గ్రామ పంచాయతీ (Muthampet GP)</p>
-                <p class="text-[11px] text-slate-400 mt-0.5">కౌతల మండలం, కొమరంభీం ఆసిఫాబాద్ జిల్లా, తెలంగాణ - 504299.</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">కౌతల మండలం, కొమురం భీం ఆసిఫాబాద్ జిల్లా, తెలంగాణ - 504299.</p>
             </div>
             <div class="flex flex-wrap justify-center gap-3 font-medium text-[11px]">
-                <a href="#home" class="hover:text-emerald-400">1. హోమ్</a> •
-                <a href="#about" class="hover:text-emerald-400">2. ప్రొఫైల్</a> •
-                <a href="#governance" class="hover:text-emerald-400">3. పాలక వర్గం</a> •
-                <a href="#infrastructure" class="hover:text-emerald-400">4. సౌకర్యాలు</a> •
-                <a href="#services" class="hover:text-emerald-400">5. పథకాలు</a> •
-                <a href="#contact" class="hover:text-emerald-400">6. ఫిర్యాదులు</a>
+                <a href="#home" class="hover:text-emerald-400">హోమ్</a> •
+                <a href="#about" class="hover:text-emerald-400">జనాభా వివరాలు</a> •
+                <a href="#governance" class="hover:text-emerald-400">పాలక వర్గం</a> •
+                <a href="#representatives" class="hover:text-emerald-400">ఎమ్మెల్యే & ఎంపీ</a> •
+                <a href="#services" class="hover:text-emerald-400">సేవలు</a> •
+                <a href="#contact" class="hover:text-emerald-400">ఫిర్యాదులు</a>
             </div>
             <div class="text-[11px] text-slate-500">
                 &copy; 2026 Muthampet GP. All rights reserved.
@@ -712,8 +740,7 @@
 
     <!-- Interactive Navigation Scripts -->
     <script>
-        // Real Hash-based 6-Page Switcher
-        const validPages = ['home', 'about', 'governance', 'infrastructure', 'services', 'contact'];
+        const validPages = ['home', 'about', 'governance', 'representatives', 'services', 'contact'];
 
         function navigatePage() {
             let hash = window.location.hash.replace('#', '');
@@ -721,22 +748,19 @@
                 hash = 'home';
             }
 
-            // Hide all pages
             document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
 
-            // Show current hash page
             const activePage = document.getElementById('page-' + hash);
             if (activePage) {
                 activePage.classList.add('active');
             }
 
-            // Update navigation highlights
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.className = 'nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800';
             });
             const activeNav = document.getElementById('nav-' + hash);
             if (activeNav) {
-                activeNav.className = 'nav-btn px-3 py-2 rounded-lg transition text-emerald-900 bg-emerald-100 font-bold';
+                activeNav.className = 'nav-btn px-3 py-2 rounded-lg transition text-emerald-950 bg-emerald-100 font-bold';
             }
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -761,7 +785,7 @@
             }
         }
 
-        // Mobile Hamburger Drawer Toggle
+        // Mobile Menu Drawer
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
@@ -773,15 +797,14 @@
             }
         }
 
-        // Online Grievance Submission Handler
+        // Grievance Handler
         function handleGrievanceSubmit(e) {
             e.preventDefault();
             const name = document.getElementById('g-name').value;
-            const category = document.getElementById('g-category').value;
             const refId = 'MTP-' + Math.floor(100000 + Math.random() * 900000);
             const alertBox = document.getElementById('grievance-alert');
 
-            alertBox.innerHTML = `<strong>ధన్యవాదాలు ${name} గారు!</strong><br>మీ '${category}' సమస్య విజయవంతంగా నమోదైంది. మీ అప్లికేషన్ రిఫరెన్స్ ఐడీ: <span class="font-bold underline text-emerald-800">${refId}</span>. త్వరలోనే పంచాయతీ సిబ్బంది పరిశీలిస్తారు.`;
+            alertBox.innerHTML = `<strong>ధన్యవాదాలు ${name} గారు!</strong><br>మీ ఫిర్యాదు విజయవంతంగా నమోదైంది. మీ అప్లికేషన్ రిఫరెన్స్ ఐడీ: <span class="font-bold underline text-emerald-800">${refId}</span>. పంచాయతీ కార్యాలయం వారు పరిశీలిస్తారు.`;
             alertBox.classList.remove('hidden');
             e.target.reset();
         }
