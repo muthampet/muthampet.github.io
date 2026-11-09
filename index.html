@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ముత్తంపేట (ముత్యంపేట) గ్రామ పంచాయతీ | Muthampet Grama Panchayat</title>
+    <title>ముత్తంపేట గ్రామ పంచాయతీ | Muthampet Grama Panchayat</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -36,8 +36,7 @@
                 <span class="lang-en hidden font-medium">Govt. of Telangana • Dept of Panchayat Raj</span>
             </div>
             <div class="flex items-center gap-3">
-                <span class="text-amber-300 font-semibold text-[11px]"><i class="fa-solid fa-location-dot mr-1"></i>కౌతల మండలం • కొమురం భీం ఆసిఫాబాద్ జిల్లా</span>
-                <!-- Lang Switcher -->
+                <span class="text-amber-300 font-semibold text-[11px]"><i class="fa-solid fa-location-dot mr-1"></i>కౌతల మండలం • కొమురం భీం ఆసిఫాబాద్</span>
                 <button onclick="toggleLang()" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold px-2.5 py-0.5 rounded text-[11px] shadow transition">
                     <span id="lang-btn-text">English</span>
                 </button>
@@ -45,7 +44,7 @@
         </div>
     </div>
 
-    <!-- Main Navigation Header (6 Direct Pages) -->
+    <!-- Main Navigation Header (6 True Independent Pages) -->
     <header class="bg-white shadow sticky top-6 z-40">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             
@@ -59,26 +58,26 @@
                         <span class="lang-te">ముత్తంపేట గ్రామ పంచాయతీ</span>
                         <span class="lang-en hidden">Muthampet Grama Panchayat</span>
                     </h1>
-                    <p class="text-[11px] text-slate-500 font-medium">LGD: 569379 | కౌతల మండలం | పిన్: 504299</p>
+                    <p class="text-[11px] text-slate-500 font-medium">LGD Code: 569379 | కౌతల మండలం | పిన్: 504299</p>
                 </div>
             </a>
 
-            <!-- Desktop Menu (6 Pure Independent Pages) -->
+            <!-- Desktop Menu -->
             <nav class="hidden xl:flex items-center space-x-1 text-xs md:text-sm font-semibold">
                 <a href="#home" id="nav-home" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
                     <span class="lang-te">1. హోమ్</span><span class="lang-en hidden">1. Home</span>
                 </a>
-                <a href="#about" id="nav-about" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">2. జనాభా & ప్రొఫైల్</span><span class="lang-en hidden">2. Census & Profile</span>
+                <a href="#census" id="nav-census" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
+                    <span class="lang-te">2. జనాభా & సెన్సస్ డేటా</span><span class="lang-en hidden">2. Census & Data</span>
                 </a>
                 <a href="#governance" id="nav-governance" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">3. పాలక వర్గం & ఫోన్ నంబర్లు</span><span class="lang-en hidden">3. Elected Body</span>
+                    <span class="lang-te">3. పాలక వర్గం & నంబర్లు</span><span class="lang-en hidden">3. Elected Body</span>
                 </a>
                 <a href="#representatives" id="nav-representatives" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
                     <span class="lang-te">4. ప్రజాప్రతినిధులు (MLA/MP)</span><span class="lang-en hidden">4. MLA & MP</span>
                 </a>
                 <a href="#services" id="nav-services" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
-                    <span class="lang-te">5. ప్రభుత్వ పథకాలు & సేవలు</span><span class="lang-en hidden">5. Welfare & Services</span>
+                    <span class="lang-te">5. ప్రభుత్వ సంక్షేమం</span><span class="lang-en hidden">5. Schemes & Welfare</span>
                 </a>
                 <a href="#contact" id="nav-contact" class="nav-btn px-3 py-2 rounded-lg transition text-slate-700 hover:bg-emerald-50 hover:text-emerald-800">
                     <span class="lang-te">6. ప్రజా ఫిర్యాదులు</span><span class="lang-en hidden">6. Grievance Portal</span>
@@ -91,18 +90,18 @@
             </button>
         </div>
 
-        <!-- Mobile Drawer Menu (Full 6 Pages) -->
+        <!-- Mobile Drawer Menu -->
         <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-1.5 text-xs font-semibold shadow-2xl">
             <a href="#home" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-house w-6 text-emerald-700"></i>1. హోమ్ పేజీ (Home)</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-users-rectangle w-6 text-emerald-700"></i>2. జనాభా లెక్కలు & చరిత్ర (Profile & Census)</a>
+            <a href="#census" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-chart-pie w-6 text-emerald-700"></i>2. 2011 సెన్సస్ & తాజా లెక్కలు (Census & Data)</a>
             <a href="#governance" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-id-card-clip w-6 text-emerald-700"></i>3. సర్పంచ్ & వార్డు సభ్యుల నంబర్లు (Directory)</a>
-            <a href="#representatives" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-building-flag w-6 text-emerald-700"></i>4. ఎమ్మెల్యే & ఎంపీ గారి వివరాలు (MLA & MP)</a>
-            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-hand-holding-dollar w-6 text-emerald-700"></i>5. ప్రభుత్వ సంక్షేమ పథకాలు (Welfare)</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-bullhorn w-6 text-emerald-700"></i>6. ప్రజా సమస్యల ఫిర్యాదు (Grievance)</a>
+            <a href="#representatives" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-building-columns w-6 text-emerald-700"></i>4. ఎమ్మెల్యే & ఎంపీ గారి వివరాలు (MLA & MP)</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-hand-holding-dollar w-6 text-emerald-700"></i>5. ప్రభుత్వ పథకాలు & సేవలు (Welfare)</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800"><i class="fa-solid fa-bullhorn w-6 text-emerald-700"></i>6. ప్రజా ఫిర్యాదుల నమోదు (Grievance)</a>
         </div>
     </header>
 
-    <!-- Notice Ticker -->
+    <!-- Notice Ribbon -->
     <div class="bg-amber-100 border-b border-amber-300 py-1.5 px-4 text-xs font-medium text-amber-950 flex items-center gap-2">
         <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px] shrink-0">నోటీస్</span>
         <marquee behavior="scroll" direction="left">
@@ -115,7 +114,6 @@
 
         <!-- ================= PAGE 1: HOME ================= -->
         <section id="page-home" class="page-view">
-            <!-- Hero Banner -->
             <div class="hero-pattern text-white py-14 md:py-20 px-4">
                 <div class="max-w-4xl mx-auto text-center">
                     <span class="inline-block bg-emerald-800/90 text-amber-300 text-xs px-3.5 py-1 rounded-full font-semibold mb-3 border border-emerald-600">
@@ -125,14 +123,14 @@
                         ముత్తంపేట గ్రామ పంచాయతీ అధికారిక వెబ్‌పోర్టల్
                     </h2>
                     <p class="text-emerald-100 text-xs md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
-                        కౌతల మండలం, కొమురం భీం ఆసిఫాబాద్ జిల్లా పరిధిలోని ముత్తంపేట గ్రామ ప్రజల సంక్షేమం, పరిపాలన మరియు ప్రజా సేవల డిజిటల్ వేదిక.
+                        కౌతల మండలం, కొమురం భీం ఆసిఫాబాద్ జిల్లా పరిధిలోని ముత్తంపేట గ్రామ ప్రజల సంక్షేమం, పరిపాలన మరియు ప్రజా సేవల సమగ్ర డిజిటల్ వేదిక.
                     </p>
                     <div class="flex flex-wrap justify-center gap-3">
                         <a href="#governance" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold text-xs md:text-sm px-5 py-3 rounded-xl shadow-lg transition">
-                            <i class="fa-solid fa-phone mr-1.5"></i>పాలక వర్గం కాంటాక్ట్స్
+                            <i class="fa-solid fa-phone mr-1.5"></i>పాలక వర్గం ఫోన్ నంబర్లు
                         </a>
-                        <a href="#about" class="bg-emerald-700 hover:bg-emerald-600 text-white font-medium text-xs md:text-sm px-5 py-3 rounded-xl transition">
-                            <i class="fa-solid fa-chart-column mr-1.5"></i>జనాభా & చరిత్ర
+                        <a href="#census" class="bg-emerald-700 hover:bg-emerald-600 text-white font-medium text-xs md:text-sm px-5 py-3 rounded-xl transition">
+                            <i class="fa-solid fa-chart-column mr-1.5"></i>జనాభా & సెన్సస్ డేటా
                         </a>
                         <a href="#contact" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium text-xs md:text-sm px-5 py-3 rounded-xl transition">
                             <i class="fa-solid fa-pen-to-square mr-1.5"></i>ఫిర్యాదు చేయండి
@@ -146,19 +144,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
                         <div class="text-xl font-bold text-slate-800">4,266</div>
-                        <div class="text-[11px] text-slate-500">మొత్తం జనాభా (2011 సెన్సస్)</div>
+                        <div class="text-[11px] text-slate-500">2011 సెన్సస్ జనాభా (4,710 తాజా అంచనా)</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
+                        <div class="text-xl font-bold text-slate-800">963 గృహాలు</div>
+                        <div class="text-[11px] text-slate-500">మొత్తం కుటుంబాలు (తాజా ~1,060)</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
                         <div class="text-xl font-bold text-slate-800">841 హెక్టార్లు</div>
-                        <div class="text-[11px] text-slate-500">భౌగోళిక వైశాల్యం (8.41 చ.కి.మీ)</div>
+                        <div class="text-[11px] text-slate-500">వైశాల్యం (2,078 ఎకరాలు)</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
                         <div class="text-xl font-bold text-slate-800">569379</div>
                         <div class="text-[11px] text-slate-500">గ్రామ LGD కోడ్</div>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-md border-t-4 border-emerald-600 text-center">
-                        <div class="text-xl font-bold text-slate-800">504299</div>
-                        <div class="text-[11px] text-slate-500">పోస్టల్ పిన్ కోడ్</div>
                     </div>
                 </div>
             </div>
@@ -166,7 +164,7 @@
             <!-- Leadership Highlights on Home Page -->
             <div class="max-w-7xl mx-auto px-4 mb-14">
                 <div class="text-center mb-8">
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">గ్రామ పంచాయతీ నాయకత్వం</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">గ్రామ పంచాయతీ ముఖ్య ప్రతినిధులు</h3>
                     <div class="w-12 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
                 </div>
 
@@ -214,119 +212,179 @@
             </div>
         </section>
 
-        <!-- ================= PAGE 2: CENSUS & VILLAGE PROFILE ================= -->
-        <section id="page-about" class="page-view py-12 px-4 max-w-7xl mx-auto">
+        <!-- ================= PAGE 2: CENSUS 2011 & LATEST ESTIMATES ================= -->
+        <section id="page-census" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 2 : అధికారిక డేటా</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ సమగ్ర సమాచారం & 2011 జనాభా లెక్కలు</h2>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 2 : జనాభా & అధికారిక డేటా</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">ముత్తంపేట 2011 సెన్సస్ వివరాలు & తాజా సమాచారం</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
             </div>
 
+            <!-- Complete Census 2011 Details Table -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-                <!-- Left 2 Cols: Description & Census Table -->
                 <div class="lg:col-span-2 space-y-6">
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <h3 class="text-base font-bold text-emerald-950 mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-circle-info text-emerald-700"></i> ముత్తంపేట భౌగోళిక వివరాలు
-                        </h3>
-                        <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4">
-                            ముత్తంపేట (ముత్యంపేట / Muthampet) గ్రామం తెలంగాణ రాష్ట్రం, కొమురం భీం ఆసిఫాబాద్ జిల్లాలోని కౌతల మండల పరిధిలో ఉంది. ఈ గ్రామం కౌతల మండల కేంద్రం నుండి కేవలం <strong>3 కి.మీ</strong> దూరంలో మరియు ఉమ్మడి జిల్లా కేంద్రమైన ఆదిలాబాద్ నుండి దాదాపు <strong>202 కి.మీ</strong> దూరంలో ఉంది. సమీప పట్టణం కాగజ్‌నగర్ దాదాపు <strong>40 కి.మీ</strong> దూరంలో ఉంది. ముత్తంపేట గ్రామం ముత్తంపేట మరియు షిర్షా గ్రామ పంచాయతీలుగా విభజించబడి, ఎన్నికైన సర్పంచ్‌ల ఆధ్వర్యంలో సమర్థవంతంగా పాలించబడుతోంది.
-                        </p>
-                    </div>
-
-                    <!-- Official 2011 Census Table -->
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                         <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-table text-emerald-700"></i> ముత్తంపేట జనాభా వివరాలు (2011 Census of India)
+                            <i class="fa-solid fa-table-list text-emerald-700"></i> ముత్తంపేట 2011 జనాభా గణాంకాలు (Census Parameters)
                         </h3>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left text-xs border-collapse">
                                 <thead>
                                     <tr class="bg-emerald-900 text-white">
-                                        <th class="p-3 rounded-tl-lg">విభాగం (Category)</th>
-                                        <th class="p-3">మొత్తం (Total)</th>
-                                        <th class="p-3">పురుషులు (Male)</th>
-                                        <th class="p-3 rounded-tr-lg">మహిళలు (Female)</th>
+                                        <th class="p-3 rounded-tl-lg">సెన్సస్ విభాగం (Census Parameter)</th>
+                                        <th class="p-3">గణాంకాలు (Census Data)</th>
+                                        <th class="p-3 rounded-tr-lg">శాతం / వివరణ (Percentage / Details)</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-200 text-slate-700">
                                     <tr class="bg-emerald-50/50 font-bold">
                                         <td class="p-3">మొత్తం జనాభా (Total Population)</td>
-                                        <td class="p-3 text-emerald-800">4,266</td>
+                                        <td class="p-3 text-emerald-800 font-extrabold">4,266</td>
+                                        <td class="p-3">మండలంలో 2వ అతిపెద్ద గ్రామం (2nd of 19)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">మొత్తం గృహాల సంఖ్య (Total No of Houses)</td>
+                                        <td class="p-3 font-semibold">963</td>
+                                        <td class="p-3">సగటున కుటుంబానికి 4.4 మంది</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">పురుషుల జనాభా (Male Population)</td>
                                         <td class="p-3">2,163</td>
-                                        <td class="p-3">2,103</td>
+                                        <td class="p-3">50.7%</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3">చిన్నారుల జనాభా (0–6 సంవత్సరాలు)</td>
-                                        <td class="p-3">524</td>
-                                        <td class="p-3">280</td>
-                                        <td class="p-3">244</td>
+                                        <td class="p-3">స్త్రీల జనాభా (Female Population %)</td>
+                                        <td class="p-3 font-semibold text-emerald-700">2,103</td>
+                                        <td class="p-3 font-semibold">49.3% (లింగ నిష్పత్తి: 972/1000)</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3">షెడ్యూల్డ్ కులాలు (SC)</td>
-                                        <td class="p-3">1,108</td>
-                                        <td class="p-3">559</td>
-                                        <td class="p-3">549</td>
+                                        <td class="p-3">మొత్తం అక్షరాస్యత రేటు (Total Literacy rate %)</td>
+                                        <td class="p-3 font-semibold">1,786</td>
+                                        <td class="p-3">41.9% (7+ వయస్సు అక్షరాస్యత: 47.7%)</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3">షెడ్యూల్డ్ తెగలు (ST)</td>
+                                        <td class="p-3">పురుషుల అక్షరాస్యత రేటు (Male Literacy)</td>
+                                        <td class="p-3">1,109</td>
+                                        <td class="p-3">58.90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">స్త్రీల అక్షరాస్యత రేటు (Female Literacy rate)</td>
+                                        <td class="p-3 font-semibold text-pink-700">677</td>
+                                        <td class="p-3">15.9% (మొత్తం జనాభాలో)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">షెడ్యూల్డ్ కులాలు (SC Population %)</td>
+                                        <td class="p-3 font-semibold">1,108</td>
+                                        <td class="p-3 font-semibold">26.0% (పురుషులు: 559, మహిళలు: 549)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">షెడ్యూల్డ్ తెగలు (ST Population %)</td>
                                         <td class="p-3">27</td>
-                                        <td class="p-3">11</td>
-                                        <td class="p-3">16</td>
+                                        <td class="p-3">0.6% (పురుషులు: 11, మహిళలు: 16)</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3">అక్షరాస్యత గలవారు (Literates)</td>
-                                        <td class="p-3 text-emerald-700 font-semibold">1,786 (47.73%)</td>
-                                        <td class="p-3">1,109 (58.90%)</td>
-                                        <td class="p-3">677 (36.42%)</td>
+                                        <td class="p-3">పని చేసే జనాభా (Working Population %)</td>
+                                        <td class="p-3 font-semibold text-emerald-800">2,420 మంది</td>
+                                        <td class="p-3 font-semibold">56.7% కార్మికులు</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3">నిరక్షరాస్యులు (Illiterates)</td>
-                                        <td class="p-3">2,480</td>
-                                        <td class="p-3">1,054</td>
-                                        <td class="p-3">1,426</td>
+                                        <td class="p-3">చిన్నారుల జనాభా (0 - 6 సం.లు)</td>
+                                        <td class="p-3 font-semibold">524</td>
+                                        <td class="p-3">బాలురు: 280, బాలికలు: 244</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">బాలికల శాతం (Girl Child 0-6 Pop %)</td>
+                                        <td class="p-3 font-semibold text-pink-700">244</td>
+                                        <td class="p-3 font-semibold">46.6%</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-[11px] text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-200">
-                            <div><strong>మొత్తం గృహాలు:</strong> 963 కుటుంబాలు</div>
-                            <div><strong>లింగ నిష్పత్తి:</strong> 972 (1,000 పురుషులకు)</div>
-                            <div><strong>సముద్ర మట్టం ఎత్తు:</strong> 187 మీటర్లు</div>
+                    </div>
+
+                    <!-- Land Use Pattern -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-map text-emerald-700"></i> ముత్తంపేట భూ వినియోగం (Land Use Pattern)
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                            <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                                <span class="text-slate-500 block">మొత్తం వైశాల్యం</span>
+                                <strong class="text-sm text-emerald-900 block mt-1">841 హెక్టార్లు</strong>
+                                <span class="text-[11px] text-slate-600">2,078.15 ఎకరాలు</span>
+                            </div>
+                            <div class="p-4 bg-amber-50 rounded-xl border border-amber-100">
+                                <span class="text-slate-500 block">వ్యవసాయ భూమి</span>
+                                <strong class="text-sm text-amber-900 block mt-1">53 హెక్టార్లు</strong>
+                                <span class="text-[11px] text-slate-600">130.97 ఎకరాలు</span>
+                            </div>
+                            <div class="p-4 bg-slate-100 rounded-xl border border-slate-200">
+                                <span class="text-slate-500 block">వ్యవసాయేతర & అటవీ భూమి</span>
+                                <strong class="text-sm text-slate-800 block mt-1">788 హెక్టార్లు</strong>
+                                <span class="text-[11px] text-slate-600">1,947.18 ఎకరాలు</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Quick Stats Card -->
+                <!-- Latest 2026 Projections & Connectivity -->
                 <div class="space-y-6">
-                    <div class="bg-emerald-900 text-white p-6 rounded-2xl shadow-lg">
-                        <h4 class="text-base font-bold mb-4 pb-2 border-b border-emerald-800 text-amber-300 flex items-center gap-2">
-                            <i class="fa-solid fa-location-crosshairs"></i> ముఖ్య కోడ్‌లు & వివరాలు
+                    <div class="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white p-6 rounded-2xl shadow-lg">
+                        <h4 class="text-base font-bold mb-3 pb-2 border-b border-emerald-700 text-amber-300 flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line"></i> తాజా 2026 అంచనా డేటా
                         </h4>
+                        <p class="text-xs text-emerald-100 leading-relaxed mb-4">
+                            2011 సెన్సస్ తర్వాత అధికారిక RGI జనాభా పెరుగుదల ప్రొజెక్షన్ ఆధారంగా రూపొందించిన తాజా అంచనాలు:
+                        </p>
                         <ul class="space-y-3 text-xs">
-                            <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">LGD Village Code:</span>
-                                <span class="font-bold">569379</span>
+                            <li class="flex justify-between border-b border-emerald-700/60 pb-2">
+                                <span class="text-emerald-200">2026 అంచనా జనాభా:</span>
+                                <span class="font-bold text-amber-300">≈ 4,710 మంది (+10.4%)</span>
                             </li>
-                            <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">మొత్తం వైశాల్యం:</span>
-                                <span class="font-bold">841 హెక్టార్లు (8.41 km²)</span>
+                            <li class="flex justify-between border-b border-emerald-700/60 pb-2">
+                                <span class="text-emerald-200">2026 అంచనా గృహాలు:</span>
+                                <span class="font-bold text-amber-300">≈ 1,060 కుటుంబాలు</span>
                             </li>
-                            <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">పోస్టల్ పిన్ కోడ్:</span>
-                                <span class="font-bold">504299</span>
+                            <li class="flex justify-between border-b border-emerald-700/60 pb-2">
+                                <span class="text-emerald-200">జనాభా సాంద్రత:</span>
+                                <span class="font-bold">507 / చ.కి.మీ</span>
                             </li>
-                            <li class="flex justify-between border-b border-emerald-800/60 pb-2">
-                                <span class="text-emerald-200">సమీప పోస్టాఫీస్:</span>
-                                <span class="font-bold">Sirpur (T) SO</span>
+                            <li class="flex justify-between border-b border-emerald-700/60 pb-2">
+                                <span class="text-emerald-200">సముద్ర మట్టం ఎత్తు:</span>
+                                <span class="font-bold">187 మీటర్లు (Altitude)</span>
                             </li>
-                            <li class="flex justify-between border-b border-emerald-800/60 pb-2">
+                            <li class="flex justify-between">
                                 <span class="text-emerald-200">STD కోడ్:</span>
                                 <span class="font-bold">08738</span>
                             </li>
+                        </ul>
+                    </div>
+
+                    <!-- Connectivity & Distances -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-xs">
+                        <h4 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-route text-emerald-700"></i> రవాణా & దూరాలు (Connectivity)
+                        </h4>
+                        <ul class="space-y-2.5 text-slate-600">
+                            <li class="flex justify-between border-b border-slate-100 pb-1.5">
+                                <span>కౌతల మండల కేంద్రం:</span>
+                                <strong class="text-slate-800">3 – 5.1 కి.మీ</strong>
+                            </li>
+                            <li class="flex justify-between border-b border-slate-100 pb-1.5">
+                                <span>సిర్పూర్ టౌన్ రైల్వే స్టేషన్ (SRUR):</span>
+                                <strong class="text-slate-800">13.3 కి.మీ</strong>
+                            </li>
+                            <li class="flex justify-between border-b border-slate-100 pb-1.5">
+                                <span>కాగజ్‌నగర్ (సమీప పట్టణం):</span>
+                                <strong class="text-slate-800">40 కి.మీ</strong>
+                            </li>
+                            <li class="flex justify-between border-b border-slate-100 pb-1.5">
+                                <span>జిల్లా కేంద్రం (ఆసిఫాబాద్):</span>
+                                <strong class="text-slate-800">45.3 కి.మీ</strong>
+                            </li>
                             <li class="flex justify-between">
-                                <span class="text-emerald-200">సమీప పట్టణం:</span>
-                                <span class="font-bold">కాగజ్‌నగర్ (40 km)</span>
+                                <span>ఉమ్మడి జిల్లా కేంద్రం (ఆదిలాబాద్):</span>
+                                <strong class="text-slate-800">202 కి.మీ</strong>
                             </li>
                         </ul>
                     </div>
@@ -337,13 +395,13 @@
         <!-- ================= PAGE 3: ELECTED BODY & PHONE NUMBERS ================= -->
         <section id="page-governance" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 3 : గ్రామ పంచాయతీ డైరెక్టరీ</span>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 3 : గ్రామ నాయకత్వం</span>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ పంచాయతీ పాలక వర్గం & ఫోన్ నంబర్లు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
-                <p class="text-xs text-slate-500 mt-2">ముత్తంపేట గ్రామ ప్రజలకు 24x7 అందుబాటులో ఉండే ప్రజాప్రతినిధులు</p>
+                <p class="text-xs text-slate-500 mt-2">ముత్తంపేట గ్రామ పంచాయతీ ఎన్నికైన ప్రజాప్రతినిధుల డైరెక్టరీ</p>
             </div>
 
-            <!-- Sarpanch & Upa-Sarpanch Top Cards -->
+            <!-- Sarpanch & Upa-Sarpanch Banner Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 <!-- Sarpanch Card -->
                 <div class="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white rounded-2xl p-6 shadow-md">
@@ -352,7 +410,7 @@
                             <i class="fa-solid fa-user-tie"></i>
                         </div>
                         <div>
-                            <span class="bg-amber-400 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded">సర్పంచ్ (Sarpanch)</span>
+                            <span class="bg-amber-400 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded">గ్రామ సర్పంచ్</span>
                             <h4 class="text-xl font-bold mt-1">రాంటెంకి. ఉష - మోతిరాం</h4>
                             <p class="text-xs text-emerald-200">ముత్తంపేట గ్రామ పంచాయతీ</p>
                         </div>
@@ -374,7 +432,7 @@
                             <i class="fa-solid fa-users"></i>
                         </div>
                         <div>
-                            <span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">ఉప సర్పంచ్ (Upa-Sarpanch)</span>
+                            <span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">ఉప సర్పంచ్</span>
                             <h4 class="text-xl font-bold mt-1">ఆడె . రామకృష్ణ</h4>
                             <p class="text-xs text-slate-300">ముత్తంపేట గ్రామ పంచాయతీ</p>
                         </div>
@@ -390,7 +448,7 @@
                 </div>
             </div>
 
-            <!-- Complete 11 Ward Members Table & Cards -->
+            <!-- Complete 11 Ward Members Cards -->
             <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 mb-10">
                 <h3 class="text-base md:text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                     <i class="fa-solid fa-address-book text-emerald-700"></i> వార్డు సభ్యుల సంపూర్ణ జాబితా & కాల్ బటన్లు
@@ -508,11 +566,11 @@
                     </div>
 
                     <!-- MPTC & Secretary Cards -->
-                    <div class="p-4 bg-emerald-50/70 rounded-xl border border-emerald-200">
-                        <span class="bg-emerald-800 text-white font-bold text-[10px] px-2 py-0.5 rounded">MPTC & కార్యదర్శి</span>
-                        <h4 class="font-bold text-sm text-slate-800 mt-2">పంచాయతీ కార్యదర్శి / MPTC</h4>
+                    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <span class="bg-emerald-800 text-white font-bold text-[10px] px-2 py-0.5 rounded">పంచాయతీ కార్యదర్శి & MPTC</span>
+                        <h4 class="font-bold text-sm text-slate-800 mt-2">గ్రామ కార్యదర్శి / MPTC</h4>
                         <p class="text-[11px] text-slate-600">కార్యాలయ పరిపాలన</p>
-                        <a href="#contact" class="text-xs text-emerald-800 font-bold mt-1 inline-block underline">ఆఫీస్ సంప్రదించండి</a>
+                        <a href="#contact" class="text-xs text-emerald-800 font-bold mt-1 inline-block underline">ఆఫీస్ కాంటాక్ట్</a>
                     </div>
                 </div>
             </div>
@@ -521,7 +579,7 @@
         <!-- ================= PAGE 4: REPRESENTATIVES (MLA & MP) ================= -->
         <section id="page-representatives" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 4 : ఉన్నత ప్రజాప్రతినిధులు</span>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 4 : నియోజకవర్గ ప్రజాప్రతినిధులు</span>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">శాసనసభ్యులు & పార్లమెంట్ సభ్యుల వివరాలు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
             </div>
@@ -540,9 +598,9 @@
                         </div>
                     </div>
                     <ul class="text-xs space-y-2 border-t border-slate-100 pt-4 text-slate-600">
-                        <li><strong>అసెంబ్లీ నియోజకవర్గం:</strong> సిర్పూర్ (Sirpur Assembly Constituency)</li>
+                        <li><strong>అసెంబ్లీ నియోజకవర్గం:</strong> సిర్పూర్ శాసనసభ నియోజకవర్గం (Sirpur)</li>
                         <li><strong>జిల్లా:</strong> కొమురం భీం ఆసిఫాబాద్</li>
-                        <li><strong>పాత్ర:</strong> నియోజకవర్గ సమగ్రాభివృద్ధి మరియు నిధుల మంజూరు</li>
+                        <li><strong>ముఖ్య బాధ్యత:</strong> నియోజకవర్గంలో రోడ్లు, విద్యా సంస్థలు, వైద్యం మరియు రైతులకు మౌలిక వసతుల కల్పన</li>
                     </ul>
                 </div>
 
@@ -559,18 +617,18 @@
                         </div>
                     </div>
                     <ul class="text-xs space-y-2 border-t border-slate-100 pt-4 text-slate-600">
-                        <li><strong>పార్లమెంటరీ నియోజకవర్గం:</strong> ఆదిలాబాద్ (Adilabad Lok Sabha)</li>
+                        <li><strong>పార్లమెంటరీ నియోజకవర్గం:</strong> ఆదిలాబాద్ లోక్‌సభ (Adilabad Parliamentary Constituency)</li>
                         <li><strong>రాష్ట్రం:</strong> తెలంగాణ</li>
-                        <li><strong>పాత్ర:</strong> జాతీయ రహదారులు, కేంద్ర నిధులు & గిరిజన/గ్రామీణాభివృద్ధి</li>
+                        <li><strong>ముఖ్య బాధ్యత:</strong> కేంద్ర ప్రభుత్వ నిధులు, జాతీయ రహదారులు మరియు గిరిజన/గ్రామీణాభివృద్ధి ప్రణాళికలు</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PAGE 5: SERVICES & SCHEMES ================= -->
+        <!-- ================= PAGE 5: SERVICES & WELFARE ================= -->
         <section id="page-services" class="page-view py-12 px-4 max-w-7xl mx-auto">
             <div class="mb-10 text-center">
-                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 5 : ప్రభుత్వ సేవలు</span>
+                <span class="text-emerald-700 font-bold text-xs uppercase tracking-wider">పేజీ 5 : ప్రజా సంక్షేమం</span>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">గ్రామ సేవలు & సంక్షేమ పథకాలు</h2>
                 <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2 rounded"></div>
             </div>
@@ -579,7 +637,7 @@
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-faucet-drip"></i></div>
                     <h4 class="font-bold text-slate-800 text-base mb-1">మిషన్ భగీరథ తాగునీరు</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">ముత్తంపేట ప్రతి గడపకూ శుద్ధ తాగునీరు సరఫరా. పైపులైన్ లీకేజీ సమస్యలకు పంచాయతీలో ఫిర్యాదు చేయండి.</p>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">ముత్తంపేటలోని ప్రతి ఇంటికీ రక్షిత తాగునీరు. నల్లా మరమ్మతులకు కార్యదర్శిని సంప్రదించండి.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
@@ -591,25 +649,25 @@
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-file-signature"></i></div>
                     <h4 class="font-bold text-slate-800 text-base mb-1">జనన & మరణ సర్టిఫికెట్లు</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">పంచాయతీ కార్యదర్శి ద్వారా జనన, మరణ రికార్డు నమోదు మరియు అధికారిక ధృవీకరణ పత్రాల జారీ.</p>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ కార్యదర్శి ద్వారా జనన, మరణ రికార్డు నమోదు మరియు అధికారిక ధృవీకరణ పత్రాల జారీ.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-person-digging"></i></div>
                     <h4 class="font-bold text-slate-800 text-base mb-1">ఉపాధి హామీ పథకం (MGNREGS)</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ కూలీలకు 100 రోజుల పని కల్పన, చెరువుల పూడికతీత మరియు హరితహారం మొక్కల పెంపకం.</p>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ కూలీలకు జాబ్ కార్డులు, 100 రోజుల పని కల్పన, చెరువుల పూడికతీత మరియు హరితహారం మొక్కల పెంపకం.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-receipt"></i></div>
                     <h4 class="font-bold text-slate-800 text-base mb-1">ఇంటి పన్ను & అనుమతులు</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ పంచాయతీ ఇంటి పన్ను రసీదులు మరియు నూతన నివాస నిర్మాణ పర్మిషన్లు.</p>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">గ్రామ పంచాయతీ ఇంటి పన్ను అధికారిక రసీదులు మరియు నూతన నివాస నిర్మాణ పర్మిషన్ల సేవలు.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div class="text-emerald-700 text-3xl mb-3"><i class="fa-solid fa-tractor"></i></div>
                     <h4 class="font-bold text-slate-800 text-base mb-1">రైతు సంక్షేమ సహాయం</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-3">రైతు భరోసా, ఎరువుల సమాచారం మరియు పంట నష్ట పరిహార నమోదు సహాయం.</p>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-3">రైతు భరోసా, ఎరువుల రాయితీలు, పంట బీమా మరియు రైతు వేదిక సమావేశాల నిర్వహణ.</p>
                 </div>
             </div>
         </section>
@@ -628,11 +686,11 @@
                     <h3 class="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
                         <i class="fa-solid fa-pen-to-square text-emerald-700"></i> ఆన్‌లైన్ సమస్య నమోదు ఫారం
                     </h3>
-                    <p class="text-xs text-slate-500 mb-6">మీ సమస్యను ఇక్కడ నమోదు చేయండి. నేరుగా సర్పంచ్ గారి కార్యాలయానికి చేరుతుంది.</p>
+                    <p class="text-xs text-slate-500 mb-6">ముత్తంపేట పరిధిలోని తాగునీరు, డ్రైనేజీ లేదా వీధి దీపాల సమస్యలను ఇక్కడ నమోదు చేయండి.</p>
 
                     <form onsubmit="handleGrievanceSubmit(event)" class="space-y-4 text-xs">
                         <div>
-                            <label class="block text-slate-700 font-semibold mb-1">మీ పేరు (Citizen Name)*</label>
+                            <label class="block text-slate-700 font-semibold mb-1">మీ పూర్తి పేరు (Citizen Name)*</label>
                             <input type="text" id="g-name" required placeholder="మీ పూర్తి పేరు నమోదు చేయండి" class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600">
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -661,7 +719,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-slate-700 font-semibold mb-1">సమస్య వివరాలు*</label>
+                            <label class="block text-slate-700 font-semibold mb-1">సమస్య వివరాలు & ఇంటి చిరునామా*</label>
                             <textarea id="g-message" rows="3" required placeholder="సమస్య పూర్తి వివరాలు ఇక్కడ రాయండి..." class="w-full p-3 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3.5 rounded-xl shadow transition">
@@ -702,7 +760,7 @@
                                 <span class="font-bold text-emerald-800">108</span>
                             </a>
                             <a href="tel:181" class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 hover:bg-emerald-50 transition">
-                                <span class="font-semibold text-slate-700">మహిళా హెల్ప్‌లైన్</span>
+                                <span class="font-semibold text-slate-700">మహిళా సహాయం</span>
                                 <span class="font-bold text-emerald-800">181</span>
                             </a>
                             <a href="tel:1912" class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 hover:bg-emerald-50 transition">
@@ -726,7 +784,7 @@
             </div>
             <div class="flex flex-wrap justify-center gap-3 font-medium text-[11px]">
                 <a href="#home" class="hover:text-emerald-400">హోమ్</a> •
-                <a href="#about" class="hover:text-emerald-400">జనాభా వివరాలు</a> •
+                <a href="#census" class="hover:text-emerald-400">సెన్సస్ డేటా</a> •
                 <a href="#governance" class="hover:text-emerald-400">పాలక వర్గం</a> •
                 <a href="#representatives" class="hover:text-emerald-400">ఎమ్మెల్యే & ఎంపీ</a> •
                 <a href="#services" class="hover:text-emerald-400">సేవలు</a> •
@@ -740,7 +798,7 @@
 
     <!-- Interactive Navigation Scripts -->
     <script>
-        const validPages = ['home', 'about', 'governance', 'representatives', 'services', 'contact'];
+        const validPages = ['home', 'census', 'governance', 'representatives', 'services', 'contact'];
 
         function navigatePage() {
             let hash = window.location.hash.replace('#', '');
